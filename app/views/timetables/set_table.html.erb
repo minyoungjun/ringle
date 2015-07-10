@@ -11,7 +11,6 @@
     background: #eee; 
   }
   th { 
-    width:75px;
     text-align:center;
     background:#2b2e3b; 
     color: white; 
@@ -24,6 +23,37 @@
   td {
     text-align: left; 
   }
+
+  .select-time {
+
+    margin:0 auto;
+    padding:5px;
+    height:100%;
+    border-radius:5px;
+    color:white;
+    font-size:8px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:2px;
+    margin-bottom:2px;
+    
+  }
+
+  .first-time {
+    background-color:#7bc673; 
+  }
+
+  .second-time {
+    background-color: #fec400;
+  }
+
+  .impossible-time {
+    display:none;
+    background-color:#d73b37;
+  }
+
+
+
 </style>
 
 <div class="inner-head" style="background-image:url('/assets/img/calendar.png');padding-bottom: 27px;">
@@ -53,6 +83,13 @@
                             <th style="background-color:#f5f5f5; color:#2b2e3b;">
                               시작시간 
                             </th>
+
+                            <th style="background-color:#0394f1;">
+                              Sat
+                            </th>
+                            <th style="background-color:#d73b37;">
+                              Sun
+                            </th>
                             <th>
                               Mon
                             </th>
@@ -68,58 +105,31 @@
                             <th>
                               Fri
                             </th>
-                            <th style="background-color:#0394f1;">
-                              Sat
-                            </th>
-                            <th style="background-color:#d73b37;">
-                              Sun
-                            </th>
                           </tr>
-                          <tr>
-                            <td>
-                              오전 9시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오전 10시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오전 11시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오전 12시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오후 1시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오후 9시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오후 10시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              오후 11시
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              자정(12시)
-                            </td>
-                          </tr>
+
+                          <%@time_array.each do |classtime|%>
+                            <tr>
+                              <td>
+                                <%=classtime%>
+                              </td>
+                              <%0.upto(6) do |day_number|%>
+                                <%if (classtime[0..1] == "정오"|| classtime[0..1] == "오전" || classtime =="오후 1시") && day_number > 1%>
+                                  <td style="border:none; background-color:#f5f5f5;">
+                                    
+                                    
+
+
+                                  </td>
+                                <%else%>
+                                  <td>
+                                    <div class="first-time select-time">1순위</div>
+                                    <div class="second-time select-time">2순위</div>
+                                    <div class="impossible-time select-time">X</div>
+                                  </td>
+                                <%end%>
+                              <%end%>
+                            </tr>
+                          <%end%>
                         </table>
             
 
