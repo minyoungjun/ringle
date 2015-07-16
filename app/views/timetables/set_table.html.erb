@@ -21,8 +21,30 @@
     border: 1px solid #ccc; 
   }
   td {
+    width:90px;
     text-align: left; 
   }
+  td .table_over {
+    display:none;
+  
+  }
+  td:hover .table_over {
+    display:block;
+  }
+
+  td .not_over {
+    display:block;
+
+  }
+
+  td:hover .not_over {
+    display:none;
+  }
+
+  .possible_hide {
+    display:none;
+
+    }
 
   .select-time {
 
@@ -54,89 +76,175 @@
 
 
 
+
+
 </style>
 
 <div class="inner-head" style="background-image:url('/assets/img/calendar.png');padding-bottom: 27px;">
-                <div class="container">
-                  <h1 class="entry-title">가능한 시간대를 선택해주세요.</h1>
-                  <p class="description" style="color:#fff;">
-                    매주 일정이 비슷하신 분께서는 매주 동일 항목을 선택해주시고,<br>
-                    일정 변동이 있으신 분은 일정변동 항목을 선택해주신 후, 이번주와 다음주 일정을 설정해주세요.
-                    </p>
-                    <br>
-                </div><!-- End container -->
-            </div><!-- End Inner Page Head -->
+  <div class="container">
+    <h1 class="entry-title">가능한 시간대를 선택해주세요.</h1>
+    <p class="description" style="color:#fff;">
+      매주 일정이 비슷하신 분께서는 매주 동일 항목을 선택해주시고,<br>
+      일정 변동이 있으신 분은 일정변동 항목을 선택해주신 후, 주별 일정을 설정해주세요.
+      </p>
+      <br>
+  </div><!-- End container -->
+</div><!-- End Inner Page Head -->
 
-            <div class="clearfix"></div>
+<div class="clearfix"></div>
 
-            <section class="login-page fadeInDown-animation" style="padding-top:25px; padding-bottom:20px;">
-                <div class="container">
-                    <div class="row">
-                      <div class="col-md-8 col-md-offset-2">
-                        <input type="radio" name="same" value="1" checked> 매주 동일   <input type="radio" name="same" value="2"> 일정 변동 있음
+<section class="login-page fadeInDown-animation" style="padding-top:25px; padding-bottom:20px;">
+  <form id="table_form">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+          <input type="radio" name="same" value="1" checked> 매주 동일   <input type="radio" name="same" value="2"> 일정 변동 있음
 
-                        <br>
-                        <br>
+          <br>
+          <br>
 
-                        <table class="table table-striped">
-                          <tr>
-                            <th style="background-color:#f5f5f5; color:#2b2e3b;">
-                              시작시간 
-                            </th>
+          <table class="table table-striped">
+            <tr>
+              <th style="background-color:#f5f5f5; color:#2b2e3b;">
+                시작시간 
+              </th>
 
-                            <th style="background-color:#0394f1;">
-                              Sat
-                            </th>
-                            <th style="background-color:#d73b37;">
-                              Sun
-                            </th>
-                            <th>
-                              Mon
-                            </th>
-                            <th>
-                              Tue
-                            </th>
-                            <th>
-                              Wed
-                            </th>
-                            <th>
-                              Thur
-                            </th>
-                            <th>
-                              Fri
-                            </th>
-                          </tr>
+              <th style="background-color:#0394f1;">
+                Sat
+              </th>
+              <th style="background-color:#d73b37;">
+                Sun
+              </th>
+              <th>
+                Mon
+              </th>
+              <th>
+                Tue
+              </th>
+              <th>
+                Wed
+              </th>
+              <th>
+                Thur
+              </th>
+              <th>
+                Fri
+              </th>
+            </tr>
 
-                          <%@time_array.each do |classtime|%>
-                            <tr>
-                              <td>
-                                <%=classtime%>
-                              </td>
-                              <%0.upto(6) do |day_number|%>
-                                <%if (classtime[0..1] == "정오"|| classtime[0..1] == "오전" || classtime =="오후 1시") && day_number > 1%>
-                                  <td style="border:none; background-color:#f5f5f5;">
-                                    
-                                    
+            <%classnumber = -1%>
+            <%@time_array.each do |classtime|%>
+              <%classnumber = classnumber  + 1%>
+              <tr>
+                <td>
+                  <%=classtime%>
+                </td>
+                <%0.upto(6) do |day_number|%>
+                  <%if (classtime[0..1] == "정오"|| classtime[0..1] == "오전" || classtime =="오후 1시") && day_number > 1%>
+                    <td style="border:none; background-color:#f5f5f5;">
+                    </td>
+                  <%else%>
+                    <td>
+                      <div class="table_over">
+
+<label>
+  <input type="radio" name="class_<%=classnumber%>_<%=day_number%>" value="1" data-classnum="<%=classnumber%>" data-day="<%=day_number%>" data-val="1">
+  1순위
+</label><br/>
+<label>
+  <input type="radio"  name="class_<%=classnumber%>_<%=day_number%>" value="2" data-classnum="<%=classnumber%>" data-day="<%=day_number%>"data-val="2">
+  2순위
+</label><br/>
+  <input type="radio"  name="class_<%=classnumber%>_<%=day_number%>" value="0" checked="true"  data-classnum="<%=classnumber%>" data-day="<%=day_number%>" data-val="3">
+  불가능
+</label><br/>
+                      </div>
+
+                      <div class="not_over_selected  selected_<%=classnumber%>_<%=day_number%> possible_hide">
+                        <div class="first-time select-time" style="display:none;">1순위</div>
+                        <div class="second-time select-time" style="display:none;">2순위</div>
+
+                      </div>
 
 
-                                  </td>
-                                <%else%>
-                                  <td>
-                                    <div class="first-time select-time">1순위</div>
-                                    <div class="second-time select-time">2순위</div>
-                                    <div class="impossible-time select-time">X</div>
-                                  </td>
-                                <%end%>
-                              <%end%>
-                            </tr>
-                          <%end%>
-                        </table>
-            
+                    </td>
+                  <%end%>
+                <%end%>
+              </tr>
+            <%end%>
+          </table>
 
 
-                      </div><!-- end col-md-8/offset -->
-                    </div><!-- end row -->
-                  </div><!-- end container -->
-            </section><!-- End Register Page -->
 
-            <div class="clearfix"></div>
+        </div><!-- end col-md-8/offset -->
+      </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- End Register Page -->
+
+<div class="clearfix"></div>
+
+
+<script>
+
+  $(document).on("click", "input[type='radio']", function(){
+
+    var classnumber = $(this).data("classnum");
+    var daynumber = $(this).data("day");
+    var select_value = $(this).data("val");
+
+
+    $(".selected_" + classnumber + "_" + daynumber + " > .select-time").css("display", "none");
+
+    if (select_value != "3"){
+
+        if (select_value == "1"){
+
+          $(".selected_" + classnumber + "_" + daynumber + " > .first-time").css("display", "block");
+
+        }else{
+
+          $(".selected_" + classnumber + "_" + daynumber + " > .second-time").css("display", "block");
+
+        }
+
+        $(".impossible_over_" + classnumber + "_" + daynumber).removeClass("not_over");
+
+        $(".impossible_over_" + classnumber + "_" + daynumber).addClass("possible_hide");
+
+        $(".selected_" + classnumber + "_" + daynumber).addClass("not_over");
+
+        $(".selected_" + classnumber + "_" + daynumber).removeClass("possible_hide");
+
+      }
+
+  var formData = $("#table_form").serialize();
+  var formUrl = "/timetables/save";
+
+  $.ajax({
+    type: "POST",
+    url : formUrl,
+    cache : true,
+    data : formData,
+    success : function(json){
+
+      if (json[0] != "success"){
+        alert("오류가 발생했습니다");
+        location.href="/timetables/set_table";
+      }
+    },
+
+    error :function(){
+        alert("오류가 발생했습니다");
+        location.href="/timetables/set_table";
+    }
+  });
+
+});
+
+
+
+
+
+</script>

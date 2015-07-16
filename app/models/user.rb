@@ -17,5 +17,12 @@ class User < ActiveRecord::Base
       end
     end
 
+    def make_class(classnumber, daynumber, week_string)
+
+      week = Oneweek.from_string(week_string)
+
+    end
+
+
 end
 
