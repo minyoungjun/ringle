@@ -25,9 +25,9 @@ function SimpleWebRTC(opts) {
             media: {
                 video: {
                         mandatory: {
-                          maxFrameRate: 15,
-maxWidth: 320,
-                          maxHeight: 240
+                          maxFrameRate: 10,
+maxWidth: 160,
+                          maxHeight: 120
                         }
                       },
                 audio: true
