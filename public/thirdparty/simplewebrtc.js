@@ -21,7 +21,13 @@ function SimpleWebRTC(opts) {
             adjustPeerVolume: true,
             peerVolumeWhenSpeaking: 0.25,
             media: {
-                video: true,
+                video: {
+                        mandatory: {
+                          maxFrameRate: 15,
+maxWidth: 320,
+                          maxHeight: 240
+                        }
+                      },
                 audio: true
             },
             receiveMedia: { // FIXME: remove old chrome <= 37 constraints format
