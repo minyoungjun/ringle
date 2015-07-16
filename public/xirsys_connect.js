@@ -4,11 +4,11 @@
 var xirsysConnect = {
 	secure : false,
 	data : {
-		domain : 'www.your-domain.com',
+		domain : 'dev.ringleplus.com',
 		application : 'default',
 		room : 'default',
-		ident : 'your-ident',
-		secret : 'your-secret'
+		ident : 'sungpah',
+		secret : 'cd20dd42-2b8a-11e5-a940-32a6c4b6df2b'
 	}
 };
 
