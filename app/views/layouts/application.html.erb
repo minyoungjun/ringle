@@ -1,286 +1,201 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
+
+<html>
+  <head>
   <title>Ringle 1:1 English Tutoring</title>
+
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
-        <!-- Meta Tags -->
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="author" content="iSeada.com">
-        <!-- Mobile Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-        <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="/style.css">
-        <!-- Responsiveness -->
-        <link rel="stylesheet" href="/assets/css/responsive.css">
-        <!-- FAV & Touch Icons -->
-        <link rel="shortcut icon" href="/assets/img/icons/favicon.ico">
-        <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png">
-         <link class="skin_link" rel="stylesheet" href="/assets/css/skin/pink.css">
-
-       
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script>window.html5 || document.write('<script src="/assets/js/vendor/html5shiv.js"><\/script>')</script>
-        <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="1:1 Ringle Premium English Tutoring">
+    <meta name="author" content="Ringle Korea">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Customizable CSS -->
+    <link href="/assets/css/main.css" rel="stylesheet" data-skrollr-stylesheet>
+    <link href="/assets/css/green.css" rel="stylesheet" title="Color">
+    <link href="/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="/assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,900,300,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic" rel="stylesheet">
+    
+    <!-- Icons/Glyphs -->
+    <link href="/assets/fonts/fontello.css" rel="stylesheet">
+    <link href="/fontello/css/fontello.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    
+    <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+      <![endif]-->
 
 </head>
     <body>
-        <div id="entire">
-            <div class="loader"></div>
-            <header class="header<%if !@main%> alt static-header<%end%>">
-                <div class="container">
-                    <div class="logo-container fl clearfix">
-                        <a href="#" class="ib">
-                            <img src="/assets/img/logo@2x.png" class="fl" alt="Logo">
-                            <span class="site-name">Ringle<span>.</span></span>
-                        </a>
-                    </div><!-- End Logo Container -->
-                    <nav class="main-navigation fr">
-                        <ul class="clearfix">
-                            <li class="parent-item haschild current_page_item">
-                                <a href="01-home-1.html" class="ln-tr">Home</a>
-                                <ul class="submenu">
-                                    <li class="sub-item"><a href="01-home-1.html" class="ln-tr">Home 1</a></li>
-                                </ul>
-                            </li>
-                            
-                             <li class="page-scroll">
-                                <a href="#tutor">Tutor</a>
-                            </li>
+
+    <!-- ============================================================= HEADER ============================================================= -->
+    
+    <header>
+      <div class="navbar">
+        
+        <div class="navbar-header">
+          <div class="container">
+            
+            <ul class="info pull-left">
+              <li><a href="#"><i class="icon-mail-1 contact"></i>contact@ringleplus.com</a></li>
+              <li><i class="icon-mobile contact"></i>010-3011-0007</li>
+            </ul><!-- /.info -->
+            
+            <ul class="social pull-right">
+              <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-s-gplus"></i></a></li>
+            </ul><!-- /.social -->
+            
+            <!-- ============================================================= LOGO MOBILE ============================================================= -->
+            
+            <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+            
+            <!-- ============================================================= LOGO MOBILE : END ============================================================= -->
+            
+            <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
+            
+          </div><!-- /.container -->
+        </div><!-- /.navbar-header -->
+        
+        <div class="yamm">
+          <div class="navbar-collapse collapse">
+            <div class="container">
+              
+              <!-- ============================================================= LOGO ============================================================= -->
+              
+              <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+              
+              <!-- ============================================================= LOGO : END ============================================================= -->
+              
+              
+              <!-- ============================================================= MAIN NAVIGATION ============================================================= -->
+              
+              <ul class="nav navbar-nav">
+
+                <li class="page-scroll">
+                  <a href="#tutors">튜터소개</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-class">교재</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#reference">고객</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-team">회사소개</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-pricing">가격정보</a>
+                </li>
+
+                <%#
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle js-activated">Features</a>
+                %>
+                  
+                  <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-submenu">
+                      <a href="#">Colors</a>
+                      
+                      <ul class="dropdown-menu">
+                        <li><a class="changecolor green" title="Green color">Green</a></li>
+                        <li><a class="changecolor blue" title="Blue color">Blue</a></li>
+                        <li><a class="changecolor red" title="Red color">Red</a></li>
+                        <li><a class="changecolor pink" title="Pink color">Pink</a></li>
+                        <li><a class="changecolor purple" title="Purple color">Purple</a></li>
+                        <li><a class="changecolor orange" title="Orange color">Orange</a></li>
+                        <li><a class="changecolor navy" title="Navy color">Navy</a></li>
+                        <li><a class="changecolor gray" title="Gray color">Gray</a></li>
+                      </ul><!-- /.dropdown-menu -->
+                    </li><!-- /.dropdown-submenu -->
+                    
+                    
+                    
+                  </ul><!-- /.dropdown-menu -->
+                </li><!-- /.dropdown -->
+                
+                
+                
+                
+              </ul><!-- /.nav -->
+              
+              <!-- ============================================================= MAIN NAVIGATION : END ============================================================= -->
+              
+            </div><!-- /.container -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.yamm -->
+      </div><!-- /.navbar -->
+    </header>
 
 
-                            <li class="page-scroll">
-                                <a href="#case-study">Case</a>
-                            </li>
 
-                            <li class="page-scroll">
-                                <a href="#process">Class Process</a>
-                            </li>
-
-                           
-                         
-                            
-                            <li class="parent-item login">
-                                <a href="#" class="ln-tr" data-toggle="modal" data-target="#login-modal"><span class="grad-btn">Login</span></a>
-                            </li>
-
-
-
-                        </ul>
-                    </nav><!-- End NAV Container -->
-                    <div class="mobile-navigation fr">
-                        <a href="#" class="mobile-btn"><span></span></a>
-                        <div class="mobile-container"></div>
-                    </div><!-- end mobile navigation -->
-                </div>
-              </header><!-- End Main Header Container -->
+    <main>
 
 
 <%= yield %>
 
-
-
-
-
-            <div class="clearfix"></div>
-
-            <footer id="footer">
-
-                    <p style="color:white;">법인명(상호) : Ringle English Education Service 대표자(성명) : 이승훈 이성파 사업자 등록번호 안내 : [876-81-00110] 통신판매업 신고 신고준비중 
-                    전화 : 010-6779-0334 팩스 : 주소 : 138-791 서울특별시 송파구 잠실3동 갤러리아팰리스 A-3105
-                    개인정보관리책임자 : 이성파(jiyeon@ringleplus.com)</p>
-
-
-              <div id="bottom">
-
-                  <div class="container">
-                        <div class="fl copyright">
-                            <p>All Rights Reserved &copy; Ringle 2015</p>
-                        </div><!-- End Copyright -->
-                        <div class="fr footer-social-icons">
-                            <ul class="clearfix">
-                                <li><a href="#" class="fb-icon ln-tr"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="tw-icon ln-tr"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="gp-icon ln-tr"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="in-icon ln-tr"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" class="yt-icon ln-tr"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#" class="rss-icon ln-tr"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div><!-- End Social Media Icons -->
-                    </div><!-- End container -->
-                </div><!-- End Bottom Footer -->
-            </footer><!-- End Footer -->
-        </div><!-- End Entire Wrap -->
-        
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog container">
-                <div class="popup-content">
-                    <div class="login-page">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="login-form">
-                                    <div class="login-title">
-                                        <span class="icon"><i class="fa fa-group"></i></span>
-                                        <span class="text">Login Area</span>
-                                        <a href="#" class="close-modal fr" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                        </a>
-                                    </div><!-- End Title -->
-                                    <form method="post" action="/" id="login-form">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="text" id="login_username" class="username-input" placeholder="User Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="password" id="login_password" class="password-input" placeholder="Password">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="input clearfix">
-                                                    <input type="submit" id="login_submit" class="submit-input grad-btn ln-tr" value="Login">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 clearfix">
-                                                <div class="custom-checkbox fl">
-                                                    <input type="checkbox" id="login_remember" class="checkbox-input" checked>
-                                                    <label for="login_remember">Remember Password</label>
-                                                </div>
-                                            </div><!-- end remember -->
-                                            <div class="col-md-6 col-sm-6 clearfix">
-                                                <div class="forgot fr">
-                                                    <a href="#" class="new-user">Create New Account</a> / <a href="#" class="reset">Forget Password ?</a>
-                                                </div>
-                                            </div><!-- end forgot password -->
-                                        </div><!-- end row -->
-                                    </form><!-- End form -->
-                                </div><!-- end login form -->
-                                <div class="login-options">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr fb">Login with Facebook Account</a>
-                                        </div><!-- end FB login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr gp">Login with Google Account</a>
-                                        </div><!-- end GP login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr tw">Login with Twitter Account</a>
-                                        </div><!-- end TW login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr ya">Login with Yahoo Account</a>
-                                        </div><!-- end YA login -->
-                                    </div>
-                                </div><!-- end login optionss -->
-                            </div><!-- end col-md-12 -->
-                        </div><!-- end row -->
-                    </div><!-- End Login Page -->
-                </div><!-- End Modal Content -->
-            </div><!-- End Dialog -->
-        </div><!-- End Login Modal -->
-
-        <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog container">
-                <div class="popup-content">
-                    <div class="login-page">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="login-form register">
-                                    <div class="login-title">
-                                        <span class="icon"><i class="fa fa-group"></i></span>
-                                        <span class="text">Register</span>
-                                        <a href="#" class="close-modal fr" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
-                                        </a>
-                                    </div><!-- End Title -->
-                                    <form method="post" action="/" id="register-form">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="text" id="reg_username" class="username-input" placeholder="User Name">
-                                                </div>
-                                            </div><!-- end username -->
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="email" id="reg_email" class="email-input" placeholder="Email">
-                                                </div>
-                                            </div><!-- end email -->
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="password" id="reg_password" class="password-input" placeholder="Password">
-                                                </div>
-                                            </div><!-- end password -->
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="input">
-                                                    <input type="password" id="reg_confirm-password" class="confirm-password-input" placeholder="Confirm Password">
-                                                </div>
-                                            </div><!-- end confirm password -->
-                                            <div class="col-md-12">
-                                                <div class="input clearfix">
-                                                    <input type="submit" id="reg_submit" class="submit-input grad-btn ln-tr" value="Login">
-                                                </div>
-                                            </div><!-- end submit -->
-                                        </div><!-- end row -->
-                                    </form><!-- End form -->
-                                </div><!-- end login form -->
-                                <div class="login-options">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr fb">Login with Facebook Account</a>
-                                        </div><!-- end FB login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr gp">Login with Google Account</a>
-                                        </div><!-- end GP login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr tw">Login with Twitter Account</a>
-                                        </div><!-- end TW login -->
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="login-op-btn grad-btn ln-tr ya">Login with Yahoo Account</a>
-                                        </div><!-- end YA login -->
-                                    </div>
-                                </div><!-- end login optionss -->
-                            </div><!-- end col-md-8/offset -->
-                        </div><!-- end row -->
-                    </div><!-- End Register Page -->
-                </div><!-- End Modal Content -->
-            </div><!-- End Dialog -->
-        </div><!-- End Register Modal -->
-
-<script>
-$(function() {
-    $('body').on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-</script>
-
-        <!-- jQuery -->
-        <script src="/assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <!-- Plugins -->
-        <script src="/assets/js/bsmodal.min.js"></script>
-        <script src="/assets/js/jquery.countdown.min.js"></script>
-        <script src="/assets/js/jquery.easydropdown.min.js"></script>
-        <script src="/assets/js/jquery.flexslider-min.js"></script>
-        <script src="/assets/js/jquery.isotope.min.js"></script>
-        <script src="/assets/js/jquery.themepunch.tools.min.js"></script>
-        <script src="/assets/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="/assets/js/jquery.viewportchecker.min.js"></script>
-        <script src="/assets/js/jquery.waypoints.min.js"></script>
-        <script src="/assets/js/scripts.js"></script>
+      
+    </main>
+    
+    
+    <!-- ============================================================= FOOTER : END ============================================================= -->
+    
+    <!-- JavaScripts placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.easing.1.3.min.js"></script>
+    <script src="/assets/js/jquery.form.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="/assets/js/skrollr.min.js"></script>
+    <script src="/assets/js/skrollr.stylesheets.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/waypoints-sticky.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/jquery.isotope.min.js"></script>
+    <script src="/assets/js/jquery.easytabs.min.js"></script>
+    <script src="/assets/js/viewport-units-buggyfill.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+    
+    <!-- OnScroll CSS3 Animations for Modern Browsers and IE10+ -->
+    <!--[if !IE]> -->
+      <script src="/assets/js/onscroll.js"></script>
+    <!-- <![endif]-->
+    
+    <!-- For demo purposes – can be removed on production -->
+    <link href="/assets/css/green.css" rel="alternate stylesheet" title="Green color">
+    <link href="/assets/css/blue.css" rel="alternate stylesheet" title="Blue color">
+    <link href="/assets/css/red.css" rel="alternate stylesheet" title="Red color">
+    <link href="/assets/css/pink.css" rel="alternate stylesheet" title="Pink color">
+    <link href="/assets/css/purple.css" rel="alternate stylesheet" title="Purple color">
+    <link href="/assets/css/orange.css" rel="alternate stylesheet" title="Orange color">
+    <link href="/assets/css/navy.css" rel="alternate stylesheet" title="Navy color">
+    <link href="/assets/css/gray.css" rel="alternate stylesheet" title="Gray color">
+    
+    <script src="/switchstylesheet/switchstylesheet.js"></script>
+    
+    <script>
+      $(document).ready(function(){ 
+        $(".changecolor").switchstylesheet( { seperator:"color"} );
+      });
+    </script>
 
     </body>
 

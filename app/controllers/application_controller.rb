@@ -6,4 +6,13 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     "/timetables/set_table"
   end
+
+  def detect_korea
+    require 'geoip'
+    geo = GeoIP.new(Rails.root.join('public', 'GeoIP.dat')).country(request.remote_ip)
+    puts geo.inspect
+    puts geo.inspect
+    puts geo.inspect
+    puts geo.inspect
+  end
 end
