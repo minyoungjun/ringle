@@ -10,9 +10,9 @@ class ApplicationController < ActionController::Base
   def detect_korea
     require 'geoip'
     geo = GeoIP.new(Rails.root.join('public', 'GeoIP.dat')).country(request.remote_ip)
-    puts geo.inspect
-    puts geo.inspect
-    puts geo.inspect
-    puts geo.inspect
+    
+    if geo.country_code.to_i != 119 && geo.country_code.to_i != 0
+      redirect_to "http://tutor.ringleplus.com"
+    end
   end
 end
