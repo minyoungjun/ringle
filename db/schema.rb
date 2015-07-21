@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703075049) do
+ActiveRecord::Schema.define(version: 20150721184255) do
 
   create_table "classtimes", force: :cascade do |t|
     t.integer  "onetime_id"
@@ -59,6 +59,20 @@ ActiveRecord::Schema.define(version: 20150703075049) do
     t.string   "monday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "post_code"
+    t.text     "address"
+    t.boolean  "checkout",   default: false
+    t.integer  "plan"
+    t.integer  "amount"
+    t.integer  "method"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|

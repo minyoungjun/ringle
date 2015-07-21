@@ -1,0 +1,90 @@
+<section id="pricing-tables">
+  <div class="container inner">
+    
+    <div class="row">
+      <div class="col-md-8 col-sm-9 center-block text-center">
+        <header>
+          <a href="/"><h2><img src="/assets/images/logo.png"/></h2></a>
+          <h2>결제전 유의 사항</h2>
+          <p>Ringle Service를 처음 이용하시는 고객님께서는 결제하시기 전에 <strong>Ringle Team(contact@ringleplus.com)</strong>으로 연락을 주시면 Service Guide를 먼저 해 드립니다.<br>기존 고객님께서는 아래에서 해당하는 버튼을 눌러 결제를 해주세요.</p>
+        </header>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+    
+    <div class="row pricing">
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          
+          <header>
+            <h2>Business</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">200,000원</span>
+              <span class="period">/ 4회</span>
+            </div><!-- /.price -->
+            
+            <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase this plan</a>
+          </header>
+          
+          <ul class="features">
+            <li><i class="icon-book"></i>Two cases</li>
+          </ul><!-- /.features -->
+          
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          <header>
+            <h2>Professional</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">400,000원</span>
+              <span class="period">/ 8회</span>
+            </div><!-- /.price -->
+            <a href="#myModal" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal">purchase this plan</a>
+            
+          </header>
+          <ul class="features">
+            <li><i class="icon-book"></i>Four cases</li>
+          </ul><!-- /.features -->
+
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          <header>
+            <h2>Customized</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">50,000원</span>
+              <span class="period">/ 1회</span>
+            </div><!-- /.price -->
+            
+            <a href="javascript:;" >Contact us!<br>contact@ringleplus.com</a>
+          </header>
+          <ul class="features">
+            <li><i class="icon-book"></i>One case per two classes</li>
+          </ul><!-- /.features -->
+          
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+    </div><!-- /.row -->
+    
+  </div><!-- /.container -->
+</section>
+
+<!-- Modal -->
+<%= render "/payments/modal"%>
+
+<script>
+  $(".purchase").click(function(){
+    var option_value = $(this).data("option");
+    $("#selectBox").val(option_value);
+  
+  });
+
+</script>

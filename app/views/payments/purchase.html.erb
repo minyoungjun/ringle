@@ -1,0 +1,134 @@
+<section id="pricing-tables">
+  <div class="container inner">
+    
+    <div class="row">
+      <div class="col-md-8 col-sm-9 center-block text-center">
+        <header>
+          <a href="/"><h2><img src="/assets/images/logo.png"/></h2></a>
+          <h2>결제가 진행중입니다...</h2>
+          <p>구매자명: <%=@purchase.name%></p>
+          <p>Email: <%=@purchase.name%></p>
+          <p>연락처: <%=@purchase.phone%>
+        </p>
+        <p>우편번호: <%=@purchase.post_code%></p>
+        <p>주소: <%=@purchase.address%></p>
+        <p>Plan: <%if @purchase.plan == 0%>4회<%else%>8회<%end%>
+        <p>결제금액: <%= number_with_delimiter(@purchase.amount)%>원</p>
+
+          <p>결제 과정에서 문제가 생기신 고객님께서는 <strong>Ringle Team(contact@ringleplus.com)</strong>으로 연락을 주시면 저희가 조치 및 안내를 해드리겠습니다.</p>
+          <p>
+            결제 정보를 잘못 입력하신 경우에는 아래의 구매 버튼을 다시 클릭해주세요.
+          </p>
+        </header>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+    
+    <div class="row pricing">
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          
+          <header>
+            <h2>Business</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">200,000원</span>
+              <span class="period">/ 4회</span>
+            </div><!-- /.price -->
+            
+            <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase this plan</a>
+          </header>
+          
+          <ul class="features">
+            <li><i class="icon-book"></i>Two cases</li>
+          </ul><!-- /.features -->
+          
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          <header>
+            <h2>Professional</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">400,000원</span>
+              <span class="period">/ 8회</span>
+            </div><!-- /.price -->
+            <a href="#myModal" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal">purchase this plan</a>
+            
+          </header>
+          <ul class="features">
+            <li><i class="icon-book"></i>Four cases</li>
+          </ul><!-- /.features -->
+
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+      <div class="col-md-4 col-sm-6 inner-top-sm">
+        <div class="plan">
+          <header>
+            <h2>Customized</h2>
+            
+            <div class="price">
+              <span class="amount" style="font-size:30px;">50,000원</span>
+              <span class="period">/ 1회</span>
+            </div><!-- /.price -->
+            
+            <a href="javascript:;" >Contact us!<br>contact@ringleplus.com</a>
+          </header>
+          <ul class="features">
+            <li><i class="icon-book"></i>One case per two classes</li>
+          </ul><!-- /.features -->
+          
+        </div><!-- /.plan -->
+      </div><!-- /.col -->
+      
+    </div><!-- /.row -->
+    
+  </div><!-- /.container -->
+</section>
+
+<!-- Modal -->
+<%= render "/payments/modal"%>
+
+<script>
+  $(".purchase").click(function(){
+    var option_value = $(this).data("option");
+    $("#selectBox").val(option_value);
+  
+  });
+
+</script>
+
+<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment.js"></script>
+
+<script>
+  var IMP = window.IMP;
+  IMP.init('imp96397147'); //'iamport' 대신 부여받은 "가맹점 식별코드"를 사용.
+  $(document).ready(function(){
+    IMP.request_pay({
+      pay_method : '<%if @purchase.method == 0%>card<%elsif @purchase.method == 1%>trans<%else%>vbank<%end%>', // 'card' : 신용카드 | 'trans' : 실시간계좌이체 | 'vbank' : 가상계좌
+        merchant_uid : 'merchant_' + new Date().getTime(),
+        name : 'Ringle 1:1 English <%if @purchase.plan == 0%>4회<%else%>8회<%end%>',
+        amount : <%=@purchase.amount%>,
+          buyer_email : '<%=@purchase.email%>',
+        buyer_name : '<%=@purchase.name%>',
+        buyer_tel : '<%=@purchase.phone%>',
+        buyer_addr : '<%=@purchase.address%>',
+        buyer_postcode : '<%=@purchase.post_code%>',
+        vbank_due : '<%today = (Time.now + 3.day).to_s%><%=today[0..3] + today[5..6] + today[8..9]%>'
+    }, function(rsp) {
+        if ( rsp.success ) {
+            var msg = 'Ringle 1:1 English 결제가 완료되었습니다.';
+            msg += '고유ID : ' + rsp.imp_uid;
+            msg += '상점 거래ID : ' + rsp.merchant_uid;
+            msg += '결제 금액 : ' + rsp.paid_amount;
+            msg += '카드 승인번호 : ' + rsp.apply_num;
+        } else {
+            var msg = '결제에 실패하였습니다.';
+            msg += '에러내용 : ' + rsp.error_msg;
+        }
+    });
+  });
+</script>

@@ -49,6 +49,7 @@
     <header>
       <div class="navbar">
         
+        <%if @main%>
         <div class="navbar-header">
           <div class="container">
             
@@ -72,7 +73,6 @@
             
           </div><!-- /.container -->
         </div><!-- /.navbar-header -->
-        
         <div class="yamm">
           <div class="navbar-collapse collapse">
             <div class="container">
@@ -87,9 +87,12 @@
               <!-- ============================================================= MAIN NAVIGATION ============================================================= -->
               
               <ul class="nav navbar-nav">
+                <li class="page-scroll">
+                  <a href="#ringle-pricing">시작하기</a>
+                </li>
 
                 <li class="page-scroll">
-                  <a href="#tutors">튜터소개</a>
+                  <a href="#tutors">튜터 소개</a>
                 </li>
                 <li class="page-scroll">
                   <a href="#ringle-class">교재</a>
@@ -98,41 +101,9 @@
                   <a href="#reference">고객</a>
                 </li>
                 <li class="page-scroll">
-                  <a href="#ringle-team">회사소개</a>
-                </li>
-                <li class="page-scroll">
-                  <a href="#ringle-pricing">가격정보</a>
+                  <a href="#ringle-team">팀 소개</a>
                 </li>
 
-                <%#
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle js-activated">Features</a>
-                %>
-                  
-                  <ul class="dropdown-menu">
-                    
-                    <li class="dropdown-submenu">
-                      <a href="#">Colors</a>
-                      
-                      <ul class="dropdown-menu">
-                        <li><a class="changecolor green" title="Green color">Green</a></li>
-                        <li><a class="changecolor blue" title="Blue color">Blue</a></li>
-                        <li><a class="changecolor red" title="Red color">Red</a></li>
-                        <li><a class="changecolor pink" title="Pink color">Pink</a></li>
-                        <li><a class="changecolor purple" title="Purple color">Purple</a></li>
-                        <li><a class="changecolor orange" title="Orange color">Orange</a></li>
-                        <li><a class="changecolor navy" title="Navy color">Navy</a></li>
-                        <li><a class="changecolor gray" title="Gray color">Gray</a></li>
-                      </ul><!-- /.dropdown-menu -->
-                    </li><!-- /.dropdown-submenu -->
-                    
-                    
-                    
-                  </ul><!-- /.dropdown-menu -->
-                </li><!-- /.dropdown -->
-                
-                
-                
                 
               </ul><!-- /.nav -->
               
@@ -141,6 +112,7 @@
             </div><!-- /.container -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.yamm -->
+        <%end%>
       </div><!-- /.navbar -->
     </header>
 
@@ -149,8 +121,15 @@
     <main>
 
 
-<%= yield %>
-
+      <%= yield %>
+      <div class="footer-bottom">
+        <div class="container inner">
+          <p class="pull-left" style="font-size:14px;">© 2015 RINGLE. All rights reserved.</p>
+          <p class="pull-right" style="font-size:10px;">법인명(상호) : Ringle English Education Service 대표자(성명) : 이승훈 이성파 사업자 등록번호 안내 : [876-81-00110] 통신판매업 신고 신고준비중 
+전화 : 010-6779-0334 주소 : 138-791 서울특별시 송파구 잠실3동 갤러리아팰리스 A-3105
+개인정보관리책임자 : 이성파(jiyeon@ringleplus.com)</p>
+        </div><!-- .container -->
+      </div><!-- .footer-bottom -->
       
     </main>
     
