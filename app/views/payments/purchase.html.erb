@@ -112,7 +112,7 @@
         merchant_uid : 'merchant_' + new Date().getTime(),
         name : 'Ringle 1:1 English <%if @purchase.plan == 0%>4회<%else%>8회<%end%>',
         amount : <%=@purchase.amount%>,
-          buyer_email : '<%=@purchase.email%>',
+        buyer_email : '<%=@purchase.email%>',
         buyer_name : '<%=@purchase.name%>',
         buyer_tel : '<%=@purchase.phone%>',
         buyer_addr : '<%=@purchase.address%>',
@@ -128,6 +128,7 @@
         } else {
             var msg = '결제에 실패하였습니다.';
             msg += '에러내용 : ' + rsp.error_msg;
+            alert(msg);
         }
     });
   });

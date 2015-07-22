@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "payments/paytest"
   get 'payments/pricing'
 
+  get 'payments/tagboard'
+
 
   get 'timetables/login'
   get 'timetables/set_table'

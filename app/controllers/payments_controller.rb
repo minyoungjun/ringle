@@ -13,8 +13,17 @@ require 'open-uri'
     pur.name = params[:name]
     pur.email = params[:email]
     pur.phone = params[:phone]
-    pur.post_code = params[:post_code]
-    pur.address = params[:address]
+    if params[:post_code] != ""
+      pur.post_code = params[:post_code]
+    else
+      pur.post_code = "000-000"
+    end
+
+    if params[:address] != ""
+      pur.address = params[:address]
+    else
+      pur.address = "입력을 하지 않으셨습니다"
+    end
     pur.plan = params[:plan].to_i
     pur.method = params[:method].to_i
     if params[:plan].to_i == 0
