@@ -13,57 +13,55 @@
             <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
             
             <div class="row">
-              <div class="col-md-12">
-                <div class="col-sm-6">
-                  <h4>구매하시는 분 성함</h4>
-                  <input type="text" name="name" class="form-control" placeholder="홍길동" required value="<%if @purchase != nil%><%=@purchase.name%><%end%>">
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                  <h4>Email 주소</h4>
-                  <input type="email" name="email" class="form-control" placeholder="Email address"value="<%if @purchase != nil%><%=@purchase.email%><%end%>" required>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                  <h4>휴대전화 번호</h4>
-                  <input type="text" name="phone" class="form-control" placeholder="010-1234-5678" required  value="<%if @purchase != nil%><%=@purchase.phone%><%end%>">
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                  <h4>우편번호(Optional)</h4>
-                  <input type="text" name="post_code" class="form-control" placeholder="123-456"  value="<%if @purchase != nil%><%=@purchase.post_code%><%end%>">
-                </div><!-- /.col -->
-                <div class="col-sm-12">
-                  <h4>주소(Optional)</h4>
-                  <input type="text" name="address" class="form-control" placeholder="비워두셔도 됩니다"  value="<%if @purchase != nil%><%=@purchase.address%><%end%>">
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                  <h4>Plan</h4>
-                  <select name="plan" id="selectBox">
-                    <option value="0">
-                      200,000원(4회)
-                    </option>
-                    <option value="1">
-                      400,000원(8회)
-                    </option>
-                  </select>
-                </div><!-- /.col -->
+              <div class="col-sm-6">
+                <h4>구매하시는 분 성함</h4>
+                <input type="text" name="name" class="form-control" placeholder="홍길동" required value="<%if @purchase != nil%><%=@purchase.name%><%end%>">
+              </div><!-- /.col -->
+              <div class="col-sm-6">
+                <h4>Email 주소</h4>
+                <input type="email" name="email" class="form-control" placeholder="Email address"value="<%if @purchase != nil%><%=@purchase.email%><%end%>" required>
+              </div><!-- /.col -->
+              <div class="col-sm-6">
+                <h4>휴대전화 번호</h4>
+                <input type="text" name="phone" class="form-control" placeholder="010-1234-5678" required  value="<%if @purchase != nil%><%=@purchase.phone%><%end%>">
+              </div><!-- /.col -->
+              <div class="col-sm-6">
+                <h4>우편번호(Optional)</h4>
+                <input type="text" name="post_code" class="form-control" placeholder="123-456"  value="<%if @purchase != nil%><%=@purchase.post_code%><%end%>">
+              </div><!-- /.col -->
+              <div class="col-sm-12">
+                <h4>주소(Optional)</h4>
+                <input type="text" name="address" class="form-control" placeholder="비워두셔도 됩니다"  value="<%if @purchase != nil%><%=@purchase.address%><%end%>">
+              </div><!-- /.col -->
+              <div class="col-sm-6">
+                <h4>Plan</h4>
+                <select name="plan" id="selectBox">
+                  <option value="0">
+                    200,000원(4회)
+                  </option>
+                  <option value="1">
+                    400,000원(8회)
+                  </option>
+                </select>
+              </div><!-- /.col -->
 
-                <div class="col-sm-6">
-                  <h4>결제방식</h4>
-                  <select name="method" >
-                    <option value="0">
-                      신용카드
+              <div class="col-sm-6">
+                <h4>결제방식</h4>
+                <select name="method" >
+                  <option value="0">
+                    신용카드
+                  </option>
+                  <option value="1">
+                    계좌이체
                     </option>
-                    <option value="1">
-                      계좌이체
-                      </option>
-                      <%#<option value="2">
-                      가상계좌(무통장입금)
-                      </option>%>
-                  </select>
-                </div><!-- /.col -->
+                    <%#<option value="2">
+                    가상계좌(무통장입금)
+                    </option>%>
+                </select>
+              </div><!-- /.col -->
 
-                <div class="col-sm-12">
-                  <button type="submit" class="btn">결제하기</button>
-                </div>
+              <div class="col-sm-12">
+                <button type="submit" class="btn">결제하기</button>
               </div>
             </div><!-- /.row -->
             <!--
