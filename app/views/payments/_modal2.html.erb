@@ -38,7 +38,7 @@
 <input type="hidden" value="2" name="plan">
                 <select name="customize" id="selectBox">
                   <option value="<%=@amount%>" selected>
-                  <%=number_with_delimiter%>원(<%=@amount%>회)
+                  <%=number_with_delimiter(@amount*50000)%>원(<%=@amount%>회)
                   </option>
                 </select>
               </div><!-- /.col -->
