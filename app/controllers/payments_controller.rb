@@ -8,6 +8,10 @@ require 'open-uri'
  #   render :text => page_string
   end
 
+  def customized
+    @amount = params[:id].to_i
+  end
+
   def purchase
     pur = Purchase.new
     pur.name = params[:name]
@@ -24,13 +28,18 @@ require 'open-uri'
     else
       pur.address = "입력을 하지 않으셨습니다"
     end
+
     pur.plan = params[:plan].to_i
     pur.method = params[:method].to_i
+
     if params[:plan].to_i == 0
       pur.amount = 200000
-    else
+    elsif params[:plan].to_i == 1
       pur.amount = 400000
+    else
+      pur.amount = (params[:customize].to_i)*50000
     end
+
     pur.save
 
     @purchase = pur

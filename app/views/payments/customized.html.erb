@@ -58,11 +58,11 @@
             <h2>Customized</h2>
             
             <div class="price">
-              <span class="amount" style="font-size:30px;">50,000원</span>
-              <span class="period">/ 1회</span>
+              <span class="amount" style="font-size:30px;"><%=number_with_delimiter(@amount*50000)%>원</span>
+              <span class="period">/ <%=@amount%>회</span>
             </div><!-- /.price -->
             
-            <a href="javascript:;" >Contact us!<br>contact@ringleplus.com</a>
+            <a href="#myModal2" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal2">purchase this plan</a>
           </header>
           <ul class="features">
             <li><i class="icon-book"></i>One case per two classes</li>

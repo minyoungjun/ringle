@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root 'landings#index'
   get "payments/paytest"
   get 'payments/pricing'
+  get 'customized/:id' => "payments#customized"
 
   get 'payments/tagboard'
-
 
   get 'timetables/login'
   get 'timetables/set_table'
