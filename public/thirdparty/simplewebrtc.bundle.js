@@ -18,16 +18,16 @@ function SimpleWebRTC(opts) {
             localVideoEl: '',
             remoteVideosEl: '',
             enableDataChannels: true,
-            autoRequestMedia: false,
+            autoRequestMedia: true,
             autoRemoveVideos: true,
             adjustPeerVolume: true,
-            peerVolumeWhenSpeaking: 0.25,
+            peerVolumeWhenSpeaking: 1,
             media: {
                 video: {
                         mandatory: {
-                          maxFrameRate: 15,
-maxWidth: 280,
-                          maxHeight: 210
+                          maxFrameRate: 20,
+maxWidth: 400,
+                          maxHeight: 300
                         }
                       },
                 audio: true
