@@ -2898,9 +2898,7 @@ blockquote:before {
     text-decoration: inherit;
     position: absolute;
     text-align: center;
-    content: '\2b';
-    width: 60px;
-    height: 60px;
+    content: '자세히';
     font-size: 60px;
     line-height: 1;
     color: #FFF;
@@ -2919,7 +2917,7 @@ blockquote:before {
 	padding-top: 15px;
 }
 .icon-overlay.icn-link a .icn-more:before {
-    content: '\2b';
+    content: '자세히';
 }
 
 
