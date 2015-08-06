@@ -221,20 +221,21 @@
               <ul class="items col-4 gap">
               
                 <%@cases.each do |book|%>
-                  <li class="item thumb interactive"> <a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;">
+                  <li class="item thumb interactive"> 
                     <figure>
                       <div class="icon-overlay icn-link">
-                        <img src="/thumbnail/thumbnail_<%=book[1]%>" alt="" style="height:157px;">
+                        <a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;">
+                          <img src="/thumbnail/thumbnail_<%=book[1]%>" alt="" style="height:157px;">
+                        </a>
                       </div><!-- /.icon-overlay -->
                       
                       <figcaption class="bordered no-top-border">
                         <div class="info">
-                          <h4><a href="portfolio-post.html"><%=book[0]%></a></h4>
+                          <h4><a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;"><%=book[0]%></a></h4>
                         </div><!-- /.info -->
                       </figcaption>
                       
                   </figure>
-                </a>
                   </li><!-- /.item -->
                 <%end%>
               
