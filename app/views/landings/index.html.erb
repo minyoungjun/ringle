@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/tinybox/tiny_style.css" />
+<script type="text/javascript" src="/tinybox/tinybox.js"></script>
 <style>
 
 <%1.upto(2) do |item|%>
@@ -31,6 +33,7 @@
 
 </style>
       <!-- ============================================================= SECTION – HERO ============================================================= -->
+
       
       <section id="hero">
         <div id="owl-main" class="owl-carousel height-lg owl-inner-nav owl-ui-lg">
@@ -196,6 +199,49 @@
             </div><!-- /.col -->
           </div><!-- /.row -->
           
+        </div><!-- /.container -->
+      </section>
+      <section id="portfolio">
+        
+        <div class="container inner">
+          <div class="row">
+            <div class="col-md-8 col-sm-9 center-block text-center">
+              <header>
+                <h2>비즈니스 현장의 최신 화두를 담고있는 유일한 교재</h2>
+                <p>Stanford MBA 및 Top 3 컨설팅 출신 멤버들이 모인  Ringle Team에서 매주 자체 제작</p>
+              </header>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+        
+        <div class="container inner-bottom">
+          <div class="row">
+            <div class="col-sm-12 portfolio">
+              
+              <ul class="items col-4 gap">
+              
+                <%@cases.each do |book|%>
+                  <li class="item thumb interactive"> <a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;">
+                    <figure>
+                      <div class="icon-overlay icn-link">
+                        <img src="/thumbnail/thumbnail_<%=book[1]%>" alt="" style="height:157px;">
+                      </div><!-- /.icon-overlay -->
+                      
+                      <figcaption class="bordered no-top-border">
+                        <div class="info">
+                          <h4><a href="portfolio-post.html"><%=book[0]%></a></h4>
+                        </div><!-- /.info -->
+                      </figcaption>
+                      
+                  </figure>
+                </a>
+                  </li><!-- /.item -->
+                <%end%>
+              
+              </ul><!-- /.items -->
+              
+            </div><!-- /.col -->
+          </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
       <%#
@@ -539,4 +585,10 @@
         </div><!-- /.container -->
       </section>
     %>
+  <script>
+    $('.case_book').click(function(){
+      var content = "<img src='/summary/summary_"  + $(this).data('image') + "' width='1000' height='500' alt=''/>";
+      
+      TINY.box.show(content,0,0,0,1)});
 
+  </script>

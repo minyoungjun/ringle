@@ -72,6 +72,7 @@
             });
 
             function showVolume(el, volume) {
+              /*
                 if (!el) return;
                 if (volume < -45) { // vary between -45 and -20
                     el.style.height = '0px';
@@ -79,7 +80,9 @@
                     el.style.height = '100%';
                 } else {
                     el.style.height = '' + Math.floor((volume + 100) * 100 / 25 - 220) + '%';
-                }
+                    }
+
+              */
             }
             webrtc.on('channelMessage', function (peer, label, data) {
                 if (data.type == 'volume') {
