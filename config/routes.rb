@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "payments/paytest"
   get 'payments/pricing'
   get 'customized/:id' => "payments#customized"
+  get 'promotion/:id' => "payments#promotion"
 
   get 'payments/tagboard'
 

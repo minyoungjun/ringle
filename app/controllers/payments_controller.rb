@@ -8,6 +8,12 @@ require 'open-uri'
  #   render :text => page_string
   end
 
+  def promotion
+    @amount = params[:id].to_i
+
+    @promotion = true
+  end
+
   def customized
     @amount = params[:id].to_i
   end
@@ -36,8 +42,10 @@ require 'open-uri'
       pur.amount = 200000
     elsif params[:plan].to_i == 1
       pur.amount = 400000
-    else
+    elsif params[:plan].to_i == 2
       pur.amount = (params[:customize].to_i)*50000
+    else
+pur.amount = (params[:customize].to_i)*25000
     end
 
     pur.save

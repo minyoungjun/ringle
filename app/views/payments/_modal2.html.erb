@@ -35,10 +35,12 @@
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <h4>Plan</h4>
-<input type="hidden" value="2" name="plan">
+<input type="hidden" value="3" name="plan">
                 <select name="customize" id="selectBox">
                   <option value="<%=@amount%>" selected>
-                  <%=number_with_delimiter(@amount*50000)%>원(<%=@amount%>회)
+                  <%if @promotion%><%=number_with_delimiter(@amount*25000)%>원
+              <%else%><%=number_with_delimiter(@amount*50000)%>원<%end%>
+                  (<%=@amount%>회)
                   </option>
                 </select>
               </div><!-- /.col -->
