@@ -12,7 +12,7 @@
         </p>
         <p>우편번호: <%=@purchase.post_code%></p>
         <p>주소: <%=@purchase.address%></p>
-        <p>Plan: <%if @purchase.plan == 0%>4회<%else%>8회<%end%>
+        <p>Plan: <%if @purchase.plan == 0%>4회<%elsif @purchase.plan == 1%>8회<%else%>Customized<%end%>
         <p>결제금액: <%= number_with_delimiter(@purchase.amount)%>원</p>
 
           <p>결제 과정에서 문제가 생기신 고객님께서는 <strong>Ringle Team(contact@ringleplus.com)</strong>으로 연락을 주시면 저희가 조치 및 안내를 해드리겠습니다.</p>
