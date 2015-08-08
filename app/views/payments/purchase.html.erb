@@ -109,7 +109,7 @@
     IMP.request_pay({
       pay_method : '<%if @purchase.method == 0%>card<%elsif @purchase.method == 1%>trans<%else%>vbank<%end%>', // 'card' : 신용카드 | 'trans' : 실시간계좌이체 | 'vbank' : 가상계좌
         merchant_uid : 'merchant_' + new Date().getTime(),
-        name : 'Ringle 1:1 English <%if @purchase.plan == 0%>4회<%elsif @purchase.plan == 1%>8회<%elsif @purchase.plan == 2%><%=(@purchase.amount/50000).to_i%>회<%else%><%=(@purchase.amount/25000).to_i%>회(반값)<%end%>',
+        name : 'Ringle tutoring <%if @purchase.plan == 0%>4회<%elsif @purchase.plan == 1%>8회<%elsif @purchase.plan == 2%><%=(@purchase.amount/50000).to_i%>회<%else%><%=(@purchase.amount/25000).to_i%>회(반값)<%end%>',
         amount : <%=@purchase.amount%>,
         buyer_email : '<%=@purchase.email%>',
         buyer_name : '<%=@purchase.name%>',
