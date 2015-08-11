@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :session => "users/session" }
 
   root 'landings#index'
+  get 'landings/tutor'
   get "payments/paytest"
   get 'payments/pricing'
   get 'customized/:id' => "payments#customized"
