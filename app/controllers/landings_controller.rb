@@ -8,6 +8,11 @@ class LandingsController < ApplicationController
 
     @main = true
     @cases = [["Coffee", "coffee.jpg"], ["Drone", "drone.jpg"],["Elon Musk","elon.jpg"],["Google vs Amazon", "googlevsamazon.png"],["House of Cards","house.jpg"], ["Icecream", "icecream.jpg"], ["MLB", "mlb.png"],["Shale Gas", "shale.jpg"],["Netflix", "netflix.jpg"],["Smartphone","smartphone.jpg"],["Social Enterprises", "social.png"]]
+    if params[:confirmation_token] != nil
+      @confirm = true
+    else
+      @confirm = false
+    end
 
   end
   def tutor

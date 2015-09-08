@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'timetables/save'
   post 'payments/purchase'
   get 'payments/purchase' => "payments#pricing"
+  get 'users/confirmation' => "landings#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
