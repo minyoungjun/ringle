@@ -2898,12 +2898,12 @@ blockquote:before {
     text-decoration: inherit;
     position: absolute;
     text-align: center;
-    content: '자세히';
-    font-size: 60px;
+    content: 'See More';
+    font-size: 20px;
     line-height: 1;
     color: #FFF;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 45%;
     z-index: 2;
     margin: -30px 0 0 -30px;
     -moz-transition: all 200ms ease-out;
@@ -2913,11 +2913,11 @@ blockquote:before {
     transition: all 200ms ease-out;
 }
 .icon-overlay a:hover .icn-more:before {
-    font-size: 30px;
+    font-size: 20px;
 	padding-top: 15px;
 }
 .icon-overlay.icn-link a .icn-more:before {
-    content: '자세히';
+    content: 'See More';
 }
 
 
