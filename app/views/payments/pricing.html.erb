@@ -2,7 +2,7 @@
   <div class="container inner">
     
     <div class="row">
-      <div class="col-md-8 col-sm-9 center-block text-center">
+      <div class="col-md-12 col-sm-9">
         <header>
           <a href="/"><h2><img src="/assets/images/logo.png"/></h2></a>
           <h2>결제전 유의 사항</h2>
@@ -21,10 +21,12 @@
             
             <div class="price">
               <span class="amount" style="font-size:30px;">200,000원</span>
-              <span class="period">/ 4회</span>
             </div><!-- /.price -->
             
+            
             <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase this plan</a>
+
+
           </header>
           
           <ul class="features">
@@ -61,9 +63,43 @@
               <span class="amount" style="font-size:30px;">50,000원</span>
               <span class="period">/ 1회</span>
             </div><!-- /.price -->
-            
-            <a href="javascript:;" >Contact us!<br>contact@ringleplus.com</a>
+
+              <div class="row">
+
+                <form action="/payments/customized" method="GET">
+              <div class="col-md-2">
+
+                <select name="number" style="margin-top:15px;">
+                  
+
+                <% for i in 4..20 %>
+                  <option value = "<%=i%>" >
+                  <%= i%>
+                </option>
+                <% end %>
+
+
+                </select>
+              </div><!-- /.col -->
+
+              <div class="col-md-10">
+
+
+
+              <button type="submit" class="btn"> CUSTOMIZED PLAN </button>
+
+
+          </form>
+
+</div>
+</div>              
+
+
+
+             
+
           </header>
+
           <ul class="features">
             <li><i class="icon-book"></i>One case per two classes</li>
           </ul><!-- /.features -->
@@ -79,11 +115,17 @@
 <!-- Modal -->
 <%= render "/payments/modal"%>
 
+<!-- Modal for customized purchase -->
+
+<%= render "/payments/modalcustom"%>
+
+
 <script>
   $(".purchase").click(function(){
     var option_value = $(this).data("option");
     $("#selectBox").val(option_value);
   
   });
-
 </script>
+
+

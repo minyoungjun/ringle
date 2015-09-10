@@ -2917,7 +2917,7 @@ blockquote:before {
 	padding-top: 15px;
 }
 .icon-overlay.icn-link a .icn-more:before {
-    content: 'See More';
+    content: '';
 }
 
 

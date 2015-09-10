@@ -1,0 +1,79 @@
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <br><br>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">체험 수업 신청</h4>
+      </div>
+      <div class="modal-body">
+        <section id="contact-form">
+          
+          <form  class="forms" action="/payments/apply_trial_class" method="post">
+            <!-- 이부분 수정 합시다 (:  -->
+
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+            
+            <div class="row">
+              <div class="col-sm-12">
+              
+                <div class="col-sm-6">
+                  
+                  <h4>이름 (name)</h4>
+                  
+                  <input type="text" name="name" class="form-control" placeholder="Your name"  required  value="">
+
+                </div><!-- /.col -->
+
+                <div class="col-sm-6">
+                  
+                  <h4>전화번호 (phone number)</h4>
+                  
+                  <input type="text" name="phone" class="form-control" placeholder="Your phone number"  required value="">
+                
+                </div><!-- /.col -->
+
+
+                <div class="col-sm-6">
+                  
+                  <h4>이메일 (email)</h4>
+                  
+                  <input type="text" name="email" class="form-control" placeholder="Your email address" required  value="">
+                
+                </div><!-- /.col -->
+
+                <div class="col-sm-12">
+                  
+                  <h4>고객님의 요청 사항 ( 가능한 시간대, 날짜 )</h4>
+                  
+                  <input type="text" name="request" class="form-control" placeholder="요청 사항"  required value="">
+                  *링글은 수업이외 어떠한 용도로도 고객님의 정보를 사용하지 않습니다.
+                
+                </div><!-- /.col -->
+
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-trigger">신청하기</button>
+                </div>
+
+
+              </div><!-- col-sm-12 -->
+
+            </div><!-- /.row -->
+
+            
+          </form>
+          
+          <div id="response"></div>
+          
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

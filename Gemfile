@@ -13,6 +13,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+
+
+
 gem 'devise', '~> 3.4.0'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'

@@ -1,11 +1,17 @@
 <section id="pricing-tables">
   <div class="container inner">
     
+          <div id="processing">
+
+
     <div class="row">
-      <div class="col-md-8 col-sm-9 center-block text-center">
+      <div class="col-md-12 col-sm-9">
         <header>
           <a href="/"><h2><img src="/assets/images/logo.png"/></h2></a>
-          <h2 id="processing">결제가 진행중입니다...</h2>
+         
+
+          <h2>결제가 진행중입니다...</h2>
+
           <p>구매자명: <%=@purchase.name%></p>
           <p>Email: <%=@purchase.email%></p>
           <p>연락처: <%=@purchase.phone%>
@@ -19,71 +25,17 @@
           <p id="processing2">
             결제 정보를 잘못 입력하신 경우에는 아래의 구매 버튼을 다시 클릭해주세요.
           </p>
+
+
+
         </header>
       </div><!-- /.col -->
     </div><!-- /.row -->
     
-    <div class="row pricing">
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
-        <div class="plan">
-          
-          <header>
-            <h2>Four times plan</h2>
-            
-            <div class="price">
-              <span class="amount" style="font-size:30px;">200,000원</span>
-              <span class="period">/ 4회</span>
-            </div><!-- /.price -->
-            
-            <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase this plan</a>
-          </header>
-          
-          <ul class="features">
-            <li><i class="icon-book"></i>Two cases</li>
-          </ul><!-- /.features -->
-        </div><!-- /.plan -->
-      </div><!-- /.col -->
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
-        <div class="plan">
-          <header>
-            <h2>Eight times plan</h2>
-            
-            <div class="price">
-              <span class="amount" style="font-size:30px;">400,000원</span>
-              <span class="period">/ 8회</span>
-            </div><!-- /.price -->
-            <a href="#myModal" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal">purchase this plan</a>
-            
-          </header>
-          <ul class="features">
-            <li><i class="icon-book"></i>Four cases</li>
-          </ul><!-- /.features -->
+    
 
-        </div><!-- /.plan -->
-      </div><!-- /.col -->
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
-        <div class="plan">
-          <header>
-            <h2>Customized</h2>
-            
-            <div class="price">
-              <span class="amount" style="font-size:30px;">50,000원</span>
-              <span class="period">/ 1회</span>
-            </div><!-- /.price -->
-            
-            <a href="javascript:;" >Contact us!<br>contact@ringleplus.com</a>
-          </header>
-          <ul class="features">
-            <li><i class="icon-book"></i>One case per two classes</li>
-          </ul><!-- /.features -->
-          
-        </div><!-- /.plan -->
-      </div><!-- /.col -->
-      
-    </div><!-- /.row -->
+            </div>
+
     
   </div><!-- /.container -->
 </section>
@@ -125,13 +77,19 @@
             msg += '결제 금액 : ' + rsp.paid_amount;
             msg += '카드 승인번호 : ' + rsp.apply_num;
             alert("결제가 완료되었습니다!")
-            $("#processing").html("결제가 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.");
-            $("#processing").hide();
+            $("#processing").html("<h1>결제가 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.</h1>");
         } else {
             var msg = '결제에 실패하였습니다.';
             msg += '에러내용 : ' + rsp.error_msg;
             alert(msg);
+            $("#processing").html("<h1>결제가 실패 하였습니다.</h1>");
+
+
         }
     });
   });
 </script>
+
+
+
+

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'landings/tutor'
   get "payments/paytest"
   get 'payments/pricing'
+  get 'payments/customized'
   get 'customized/:id' => "payments#customized"
   get 'promotion/:id' => "payments#promotion"
 
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   get 'timetables/set_table'
   post 'timetables/save'
   post 'payments/purchase'
+  post 'payments/apply_trial_class'
+  
   get 'payments/purchase' => "payments#pricing"
   get 'users/confirmation' => "landings#index"
 

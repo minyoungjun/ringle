@@ -15,8 +15,40 @@ require 'open-uri'
   end
 
   def customized
-    @amount = params[:id].to_i
+    @amount = params[:number].to_i
+
   end
+
+  def apply_trial_class
+
+
+    name = params[:name]
+    phone = params[:phone]
+    email = params[:email]
+    request = params[:request]
+
+
+
+
+    RestClient.post "https://api:key-43a3cc016e86a279ee0ac72636c6f671"\
+    "@api.mailgun.net/v3/ringleplus.com/messages",
+    :from => "Ringle <admin@ringleplus.com>",
+    :to => [ 'jiyeon@ringleplus.com', 'seunghoon@ringleplus.com'], 
+    :subject => "어드민에게 감",  
+    :html => "이름:" + name + "// 전화:" +  phone + "// 이메일:" + email + "//요청" + request
+
+    redirect_to :back 
+
+
+     
+
+
+
+
+  end
+
+
+
 
   def purchase
     pur = Purchase.new

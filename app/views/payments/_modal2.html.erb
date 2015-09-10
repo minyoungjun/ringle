@@ -33,9 +33,13 @@
                 <h4>주소(Optional)</h4>
                 <input type="text" name="address" class="form-control" placeholder="비워두셔도 됩니다"  value="<%if @purchase != nil%><%=@purchase.address%><%end%>">
               </div><!-- /.col -->
+              
               <div class="col-sm-6">
                 <h4>Plan</h4>
                 <input type="hidden" value="<%if @promotion%>3<%else%>2<%end%>" name="plan">
+
+
+
                 <select name="customize" id="selectBox">
                   <option value="<%=@amount%>" selected>
                   <%if @promotion%><%=number_with_delimiter(@amount*25000)%>원
@@ -44,6 +48,8 @@
                   </option>
                 </select>
               </div><!-- /.col -->
+
+
 
               <div class="col-sm-6">
                 <h4>결제방식</h4>
