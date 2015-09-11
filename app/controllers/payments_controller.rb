@@ -33,7 +33,7 @@ require 'open-uri'
     RestClient.post "https://api:key-43a3cc016e86a279ee0ac72636c6f671"\
     "@api.mailgun.net/v3/ringleplus.com/messages",
     :from => "Ringle <admin@ringleplus.com>",
-    :to => [ 'jiyeon@ringleplus.com', 'seunghoon@ringleplus.com'], 
+    :to => [ 'jiyeon@ringleplus.com', 'seunghoon@ringleplus.com','mymy@ringleplus.com'], 
     :subject => "어드민에게 감",  
     :html => "이름:" + name + "// 전화:" +  phone + "// 이메일:" + email + "//요청" + request
 
