@@ -43,12 +43,61 @@
 }
 
 </style>
-      <!-- ============================================================= SECTION – HERO ============================================================= -->
 
-      
-
-
-
+    <header>
+      <div class="navbar">    
+        <%if @main%>
+        <div class="navbar-header">
+          <div class="container">
+            
+            <ul class="info pull-left">
+              <li><a href="#"><i class="icon-mail-1 contact"></i>contact@ringleplus.com</a></li>
+              <li><i class="icon-mobile contact"></i>010-6779-0334</li>
+            </ul><!-- /.info -->
+            
+            <ul class="social pull-right">
+              <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-s-gplus"></i></a></li>
+            </ul><!-- /.social -->
+            
+            <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+            <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
+            
+          </div><!-- /.container -->
+        </div><!-- /.navbar-header -->
+        <div class="yamm">
+          <div class="navbar-collapse collapse">
+            <div class="container">
+              
+              <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+     
+              <ul class="nav navbar-nav">
+                
+                <li class="page-scroll">
+                  <a href="#ringle-intro">About Ringle</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-ref">Reference</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-clients">Clients</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-apply">Apply</a>
+                </li>
+                <li class="page-scroll">
+                  <a href="#ringle-clip">Clips</a>
+                </li>
+              </ul><!-- /.nav -->
+              
+              
+            </div><!-- /.container -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.yamm -->
+        <%end%>
+      </div><!-- /.navbar -->
+    </header>
+    <main>
 
 
       <section id="hero">
@@ -58,7 +107,7 @@
             <div class="container">
               <div class="caption vertical-center text-center ">
                 
-                <h1 class="fadeInLeft-1 light-color">1:1 English Tutoring</h1>
+                <h1 class="fadeInLeft-1 light-color">Ringle 1:1 English Tutoring</h1>
                 <p class="fadeInLeft-2 light-color"></p>
                 
 
@@ -76,7 +125,7 @@
             <div class="container">
               <div class="caption vertical-center text-center">
                 
-                <h1 class="fadeInDown-1 light-color">carefully selected topic</h1>
+                <h1 class="fadeInDown-1 light-color">Ringle 1:1 English Tutoring</h1>
                 <p class="fadeInDown-2 light-color"></p>
                 <div class="fadeInDown-3">
                   
@@ -157,7 +206,7 @@
 
 
 
-        <section id="about_ringle" class="img-bg img-bg-soft tint-bg" style="background-image: url(/assets/images/art/image-background04.jpg);">
+        <section id="ringle-about" class="img-bg img-bg-soft tint-bg" style="background-image: url(/assets/images/art/image-background04.jpg);">
         <div class="container inner">
           
           <div class="row">
@@ -199,6 +248,7 @@
       </section>
 
 
+      <div id="ringle-ref">
 
       <section id="sliders">
         <div class="container inner">
@@ -325,92 +375,9 @@
           
         </div><!-- /.container -->
       </section>
-      
-      
-      <section id="ringle-book" class="light-bg">
-        <div class="container inner-top-md">
-          
-
-          <div class="row">
-            <div class="col-md-12 col-sm-9 ">
-
-
-              <header>
-               <h1>Ringle's Book</h1>
-               <h3 class="sidelines text-center"></h3>
-
-
-                <h2>Section for Ringle's working materials.</h2>
-                <p> </p>
-
-                <br>
-              </header>
-            </div>
-          </div>
-
-
-
-
-          <div class="row">
-            <div class="col-md-12 col-sm-9 center-block text-center">
-
-
-       
-
-              <div id="accordion" class="panel-group">
-                <div class="panel panel-default">       
-                  
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="panel-toggle" data-toggle="collapse" data-parent="#accordion" href="#content">
-                        <span>Ringle's Books</span>
-                      </a>
-                    </h4>
-                  </div><!-- /.panel-heading -->
-                  
-                  <div id="content" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      <div id="owl-popular-posts" class="owl-carousel owl-item-gap-sm">
-
-                    <%@cases.each do |book|%>
-                    <div class="item">
-                      <figure>
-                          <div class="icon-overlay icn-link">
-                            <a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;">
-                              <img src="/thumbnail/thumbnail_<%=book[1]%>" alt="" style="height:120px;">
-                            </a>
-                          </div><!-- /.icon-overlay -->
-
-
-                          
-                          <figcaption class="bordered no-top-border">
-                            <div class="info">
-                              <h4><a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;"><%=book[0]%></a></h4>
-                            </div><!-- /.info -->
-                          </figcaption>    
-                      </figure>
-                    </div><!-- /.item -->
-              
-                    <%end%>
-
-                        
-                      </div><!-- /.owl-carousel -->
-                    </div><!-- /.panel-body -->
-
-                  </div><!-- /.content -->
-          
-                </div><!-- /.panel -->
-              </div><!-- /.accordion -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-           <br><br><br><br>
-        </div><!-- /.container -->
-      </section>
-      
-
-      <!-- ============================================================= SECTION – CLIENTS ============================================================= -->
+      </div>  
     
-      <section id="clients">
+      <section id="ringle-clients">
         <div class="container inner">
           
           <div class="row">
@@ -425,7 +392,7 @@
           
           <div class="row thumbs gap-lg inner-top-sm">
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb" >
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb" >
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -437,7 +404,7 @@
 
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -448,7 +415,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -459,7 +426,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -470,7 +437,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -481,7 +448,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -492,7 +459,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -503,7 +470,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -514,7 +481,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -525,7 +492,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -536,7 +503,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -547,7 +514,7 @@
                   </figure>
                 </div><!-- /.col -->
                 
-                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <div class="col-md-2 col-sm-4 col-xs-6 thumb">
                   <figure>
                     <figcaption class="text-overlay">
                       <div class="info">
@@ -571,14 +538,14 @@
 
 
       
-      <section id="reasons">
+      <section id="ringle-apply">
         <div class="container inner">
           
           <div class="row">
             <div class="col-md-12 col-sm-9">
               <header>
                 <h1>How to be Ringle's tutoring partner?</h1>
-                <p>Doloreiur quia commolu dolupta oreprerum tibusam.</p>
+                
               </header>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -596,32 +563,42 @@
                 <div class="panel-container">
                   
                   <div class="tab-content" id="tab-1">
-                    <div class="row">
+                    <div class="row">              
+                      <div class="col-md-6">
+                        <h2>Ringle Class Guideline</h2>
                       
-                      <div class="col-md-5 col-md-push-5 col-md-offset-1 col-sm-6 col-sm-push-6 inner-left-xs">
-                        <figure><img src="/assets/images/art/product04.jpg" alt=""></figure>
-                      </div><!-- /.col -->
-                      
-                      <div class="col-md-5 col-md-pull-5 col-sm-6 col-sm-pull-6 inner-top-xs inner-right-xs">
-                        <h3>READING POLICY + MANUAL ( CLASS GUIDELINE )</h3>
-                        <p>Before the mock session, you need to know all about Ringle. Get prepared by reading our manual and policies.</p>
+                        For a stable work environment, Ringle has set a basic policy.<br><br>
+
+                        1. You have to join a class in a timely manner. ( By :57)<br>
+                        2. Your up/download internet speed should be faster than 2.6mbps.<br>
+                        3. You have to setup a clean/stable/quite environment.<br><br>
+
+                        <p>Before the mock session, get prepared by reading our manual and policies.</p>
+                        <a href="https://s3-us-west-2.amazonaws.com/ringleplus2015/Ringle_policy.pdf" class="btn btn-large icon-download"> Manual </a>
                       </div><!-- /.col -->
 
-                      <!-- 그리고 간략한 설명을 좀 넣어야 할 것 같음 -->
+                      <div class="col-md-6">
+                        <h2>Incentive Program</h2>
                       
+                        Ringle has a rating system for our tutoring partners.<br><br>
+
+                        1. Depending on the class performance, the student will evaluate your class.<br>
+                        2. You will accumulate points from classes.<br>
+                        3. You will be promoted depending on points.<br>
+                        <p style="color:#337ab7;">4. When you refer your friends, you will get compenated.</p><br>
+                        <p>For more information, please refer to this file</p>
+                        <a href="https://s3-us-west-2.amazonaws.com/ringleplus2015/Ringle_policy.pdf" class="btn btn-large icon-download"> Incentive</a>
+                      </div><!-- /.col -->
+
                     </div><!-- /.row -->
                   </div><!-- /.tab-content -->
                   
                   <div class="tab-content" id="tab-2">
                     <div class="row">
                       
-                      <div class="col-md-5 col-md-offset-1 col-sm-6 inner-right-xs">
-                        <figure><img src="/assets/images/art/product05.jpg" alt=""></figure>
-                      </div><!-- /.col -->
-                      
-                      <div class="col-md-5 col-sm-6 inner-top-xs inner-left-xs">
-                        <h3>Simplicity</h3>
-                        <p>Visit the link and schedule an interview with us. After you choose your availability, Ringle will contact you within 12 hrs with a Google Invitation. To see the link, you have to sign up.</p>
+                      <div class="col-md-12">
+                        <h3>Interview Setup</h3>
+                        <p>Visit the link and schedule an interview with us. After you choose your availability, Ringle will contact you within 12 hrs with a Ringle Invitation. To see the link, you have to sign up.</p>
                       </div><!-- /.col -->
                       
                     </div><!-- /.row -->
@@ -630,13 +607,66 @@
                   <div class="tab-content" id="tab-3">
                     <div class="row">
                       
-                      <div class="col-md-4 col-md-push-3 col-md-offset-1 col-sm-6 inner-left-xs inner-right-xs">
-                        <figure><img src="/assets/images/art/product06.jpg" alt=""></figure>
-                      </div><!-- /.col -->
-                      
-                      <div class="col-md-3 col-md-pull-4 col-sm-6">
-                        <h3>Design</h3>
-                        <p>The Ringle team will conduct the mock session with you. You will demonstrate your skills on one of the 6 cases below. Please choose your favorite so you can best showcase your abilities.</p>
+                      <div class="col-md-12">
+                        <h3>Mock Session</h3>
+                        <p>The Ringle team will conduct the mock session with you. You will demonstrate your skills on one of the cases below. Please choose your favorite so you can best showcase your abilities.</p>
+
+                        <div class="row">
+                          <div class="col-md-12 col-sm-9 center-block text-center">
+                            <div id="accordion" class="panel-group">
+                              <div class="panel panel-default">       
+                                
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a class="panel-toggle" data-toggle="collapse" data-parent="#accordion" href="#content">
+                                      <span>Ringle's Books</span>
+                                    </a>
+                                  </h4>
+                                </div><!-- /.panel-heading -->
+                                
+                                <div id="content" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                    <div id="owl-popular-posts" class="owl-carousel owl-item-gap-sm">
+
+                                  <%@cases.each do |book|%>
+                                  <div class="item">
+                                    <figure>
+                                        <div class="icon-overlay icn-link">
+                                          <a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;">
+                                            <img src="/thumbnail/thumbnail_<%=book[1]%>" alt="" style="height:120px;">
+                                          </a>
+                                        </div><!-- /.icon-overlay -->
+
+
+                                        
+                                        <figcaption class="bordered no-top-border">
+                                          <div class="info">
+                                            <h4><a  class="case_book" data-image="<%=book[1][0..-5]%>.png" href="javascript:;"><%=book[0]%></a></h4>
+                                          </div><!-- /.info -->
+                                        </figcaption>    
+                                    </figure>
+                                  </div><!-- /.item -->
+                            
+                                  <%end%>
+
+                                      
+                                    </div><!-- /.owl-carousel -->
+                                  </div><!-- /.panel-body -->
+
+                                </div><!-- /.content -->
+                        
+                              </div><!-- /.panel -->
+                            </div><!-- /.accordion -->
+                          </div><!-- /.col -->
+                        </div><!-- /.row -->
+
+
+
+
+
+
+
+
                       </div><!-- /.col -->
                       
                       
@@ -653,535 +683,133 @@
         </div><!-- /.container -->
       </section>
       
-      <!-- ============================================================= SECTION – REASONS : END ============================================================= -->
-      
-
-
-
-
-
-
-
-
-      <!-- ============================================================= SECTION – BLOG ============================================================= -->
-      
-      <section id="blog" class="light-bg">
-        <div class="container inner-top-sm inner-bottom classic-blog">
-        
-          
-          <div class="row">
-            
-            <div class="col-md-12 inner-right-sm">
-              
-              <div class="posts sidemeta">
-                
-                <div class="post format-gallery">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">23</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-gallery"><i class="icon-picture"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    
-                    
-                    
-                    <h2 class="post-title">
-                      <a href="blog-post.html">Learn how to successfully design brand identities</a>
-                    </h2>
-                    
-                    
-                    <p>Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.</p>
-                    
-                    <a href="blog-post.html" class="btn">Read more</a>
-                    
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post -->
-                
-
-                <div class="post format-quote">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">21</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-quote"><i class="icon-quote"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    <blockquote>
-                      <p>Been putting off creating my portfolio for several years, then I found REEN and about 30 minutes later ... I have an awesome looking portfolio. Totally love it – keep up the good work!</p>
-                      <footer><cite>Bill Jobs</cite></footer>
-                    </blockquote>
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post -->
-                
-
-                <div class="post format-standard">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">14</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-standard"><i class="icon-edit"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    
-                    <h2 class="post-title">
-                      <a href="blog-post.html">The ultimate guide for designers to start freelancing</a>
-                    </h2>
-                    
-                    <ul class="meta">
-                      <li class="categories"><a href="#">Business</a></li>
-                      <li class="comments"><a href="#">14</a></li>
-                      <li class="likes"><a href="#">30</a></li>
-                    </ul><!-- /.meta -->
-                    
-                    <p>Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.</p>
-                    
-                    <a href="blog-post.html" class="btn">Read more</a>
-                    
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post -->
-                
-                <div class="post format-image">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">10</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-image"><i class="icon-picture-1"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    
-                    <figure class="icon-overlay icn-link post-media">
-                      <a href="blog-post.html"><img src="assets/images/art/photograph04-lg.jpg" alt=""></a>
-                    </figure><!-- /.post-media -->
-                    
-                    <h2 class="post-title">
-                      <a href="blog-post.html">The girl and the summerlight</a>
-                    </h2>
-                    
-                    <ul class="meta">
-                      <li class="categories"><a href="#">Photography</a></li>
-                      <li class="comments"><a href="#">63</a></li>
-                      <li class="likes"><a href="#">114</a></li>
-                    </ul><!-- /.meta -->
-                    
-                    <p>Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.</p>
-                    
-                    <a href="blog-post.html" class="btn">Read more</a>
-                    
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post -->
-                
-                <div class="post format-video">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">07</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-video"><i class="icon-video-1"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    
-                    <div class="video-container post-media">
-                      <iframe src="http://player.vimeo.com/video/65468064?title=0&amp;byline=0&amp;color=1abb9c" width="750" height="422" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div><!-- /.post-media -->
-                    
-                    <h2 class="post-title">
-                      <a href="blog-post.html">Pure geometry in motion</a>
-                    </h2>
-                    
-                    <ul class="meta">
-                      <li class="categories"><a href="#">Motion&nbsp;Graphics</a></li>
-                      <li class="comments"><a href="#">25</a></li>
-                      <li class="likes"><a href="#">84</a></li>
-                    </ul><!-- /.meta -->
-                    
-                    <p>Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.</p>
-                    
-                    <a href="blog-post.html" class="btn">Read more</a>
-                    
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post -->
-                
-                
-                
-                <div class="post format-link">
-                  
-                  <div class="date-wrapper">
-                    <div class="date">
-                      <span class="day">01</span>
-                      <span class="month">May</span>
-                    </div><!-- /.date -->
-                  </div><!-- /.date-wrapper -->
-                  
-                  <div class="format-wrapper">
-                    <a href="#" data-filter=".format-link"><i class="icon-popup"></i></a>
-                  </div><!-- /.format-wrapper -->
-                  
-                  <div class="post-content">
-                    <h2 class="post-title">
-                      <a href="http://www.wrapbootstrap.com" target="_blank">Super-Awesome Bootstrap Website Templates</a>
-                    </h2>
-                    <a href="http://www.wrapbootstrap.com" target="_blank">www.wrapbootstrap.com</a>
-                  </div><!-- /.post-content --> 
-                  
-                </div><!-- /.post --> 
-                
-              </div><!-- /.posts -->
-              
-           
-              
-            </div><!-- /.col -->
-            
-           
-            
-          </div><!-- /.row -->
-          
-        </div><!-- /.container -->
-      </section>
-      
-      <!-- ============================================================= SECTION – BLOG : END ============================================================= -->
-
-
-
-
-      <section id="ringle-program" class="img-bg img-bg-soft tint-bg" style="background-image: url(assets/images/art/image-background04.jpg);">
+      <section id="ringle-clip" class="light-bg">
         <div class="container inner">
-          
           <div class="row">
             <div class="col-md-12 col-sm-9">
               <header>
-               <h1>링글 고객 Reference</h1>
-                <h3 class="sidelines text-center"></h3>
-
-              </header>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-
-          <div class="row">
-            <div class="col-md-1">     
-            </div>
-            <div class="col-md-10">
-
-          
-            <h2>BCG 컨설턴트</h2>
-            <p style="text-align: left; margin-bottom:20px; font-size:15px; line-height: 150%;">
-
-           
-
-            “다수 영어 회화 수업을 화상으로도, 전화 영어로도 들어본 경험이 있지만, 링글만은 명확한 차별점이 있습니다. 물론
-
-            강사 quality 측면도 장점으로 꼽을 수 있겠지만, 저 개인적으로는 수업 교재 및 방식이 더 큰 링글만의 차별점이라
-
-            생각합니다. 단순한 생활 영어나 정형화된 비즈니스 회화가 아니라, 실제 수업이 최근 미국에서 일어나고 있는
-
-            trendy한 주제를 기반, 특정 산업군 내 명확한 장/단점이 있는 두 가지 대상을 다양한 각도에서 비교하고 저의 의견을
-
-            제시하는 방식으로 이루어지거든요. 이로 인해 수강자는 단순히 영어로 '말'만 하는 것이 아니라 영어로 '생각하면서
-
-            말할 수 있게' 됩니다. 따라서 수강자 입장에서는 최근 다양한 트렌드 대해서도 접하고 생각해 볼 수 있게 되고, 이를
-
-            영어로 풀어 내야 하니 영어 실력 향상 목적에 부합함은 물론이지요. 따라서 저는 링글을 추천합니다!”
-            </p>
-
-            </div>
-   
-            <div class="col-md-1">
-            </div>
-          </div> <!--row -->
-
-
-          <br>
-
-          <div class="row">
-            <div class="col-md-1">     
-            </div>
-            <div class="col-md-10">
-
-          
-            <h2>SKT 매니저</h2>
-            <p style="text-align: left; margin-bottom:20px; font-size:15px; line-height: 150%;">
-
-           
-            "링글을 하면서 가장 좋았던 점은 내가 관심있는 분야의 이야기를 주제로 영어로 논의할 수 있었다는 점입니다. 개인
-
-            적으로 이 점이 영어 학습에 매우 효과적이라고 생각하는 이유는 학생이 자발적으로 수업을 준비할 수 있는 계기를
-
-            제공하며, 준비에 투입되는 노력이 늘어날수록 실력이 향상된다고 믿기 때문입니다. 직접 경험해보니 단순히 신변잡
-
-            기의 이야기를 원어민과 나누는 것과 특정 주제로 토론을 하는 것은 또 다른 차원의 영어 수준을 요구합니다. 링글과
-
-            함께하면서 이점을 깨닫게 되었고, 매 수업마다 점점 더 많은 사전 준비를 하도록 선순환이 이루어지며 영어 수준을
-
-            한 단계 올릴 수 있는 기회를 링글은 제공합니다.”
-            </p>
-
-            </div>
-   
-            <div class="col-md-1">
-            </div>
-          </div> <!--row -->
-
-          <br>
-
-          <div class="row">
-            <div class="col-md-1">     
-            </div>
-            <div class="col-md-10">
-
-          
-            <h2>Harvard MBA</h2>
-            <p style="text-align: left; margin-bottom:20px; font-size:15px; line-height: 150%;">
-
-           
-            "링글은 기존과 완전히 다른 방식의 영어 학습 서비스입니다. 자신이 관심있는 주제를 선정하면, 그 주제에 대한 핵심
-
-            표현뿐만 아니라 트렌드까지도 흥미롭게 알아갈 수 있어서 정말 좋았습니다. 수업 준비만으로도 리딩, 리스닝, 라이팅
-
-            학습이 자연스럽게 이루어져서 균형있게 도움이 되었습니다. 미국 명문대 학생들에게 발음, 억양 뿐만 아니라 미국
-
-            엘리트들의 최근 영어사용 패턴까지 확인할 수 있어, 확실히 한 차원 높은 퀄리티였습니다."
-
-            </p>
-
-            </div>
-   
-            <div class="col-md-1">
-            </div>
-          </div> <!--row -->
-
-
-
-
-
-        </div><!-- /.container -->
-      </section>
-
-
-
-
-<!-- 이부분에 고객님들의 레퍼런스 -->
-
-
-
-
-
-      <section id="selected-works" class="light-bg">
-        <div class="container inner">
-          
-          <div class="row">
-            <div class="col-md-12 col-sm-9">
-              <header>
-               <h1>링글 Team</h1>
-                <h3 class="sidelines text-center"></h3>
-                <p> 최고의 수업을 제공하기 위해 한국과 미국에서 모였습니다.</p><br>
+                <h1>Reference Clips</h1>                
               </header>
             </div><!-- /.col -->
           </div><!-- /.row -->
           
-          <div class="row">
-            <div class="col-sm-12 portfolio">
-              
-             
-              
-              <ul class="items col-4">
+          <div class="row inner-top-sm">
+            <div class="col-xs-12">
+              <div class="tabs tabs-reasons tabs-circle-top tab-container">
                 
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>이승훈</h3>
-                          <p>
-                          수업자료 개발/수업 Quality 개선/<br>
-                          고객 개척 & 커뮤니케이션 총괄<br>
-                          현 Stanford GSB (MBA) <br>
-                          전 BCG, Devsisters</p>
+                <ul class="etabs text-center">
+                  <li class="tab"><a href="#tab-1"><div>1</div>Debate Class</a></li>
+                  <li class="tab"><a href="#tab-2"><div>2</div>Correction Class</a></li>
+                  <li class="tab"><a href="#tab-3"><div>3</div>Ice Breaker</a></li>
+                  <li class="tab"><a href="#tab-4"><div>3</div>Wrap Up</a></li>
 
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/art/photograph02.jpg" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
+                </ul><!-- /.etabs -->
+                
+                <div class="panel-container">
+                  <div class="tab-content" id="tab-1">
+                    <div class="row">    
+                      <div class="col-md-2">
+                      </div>          
+                      <div class="col-md-8">
+                        <h2>Debate Class Guideline</h2>
+                        For a stable work environment, Ringle has set a basic policy.<br><br>
+                        1. You have to join a class in a timely manner. ( By :57)<br>
+                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/vW8UjqnfJck?rel=0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- /.col -->
+                      <div class="col-md-2">
+                      </div>          
+                    </div><!-- /.row -->
+                  </div><!-- /.tab-content -->
 
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>이성파</h3>
-                          <p>
-                          기술개발/서비스 Quality 관리/<br>
-                          Tutor 선발 육성 총괄<br>
-                          현 Stanford GSB (MBA) <br>
-                          전 Fairchild Semiconductor</p>
+                  <div class="tab-content" id="tab-2">
+                    <div class="row">    
+                      <div class="col-md-2">
+                      </div>          
+                      <div class="col-md-8">
+                        <h2>Correction Class Guideline</h2>
+                        For a stable work environment, Ringle has set a basic policy.<br><br>
+                        1. You have to join a class in a timely manner. ( By :57)<br>
+                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/5QM3ZWBD3TI?rel=0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- /.col -->
+                      <div class="col-md-2">
+                      </div>          
+                    </div><!-- /.row -->
+                  </div><!-- /.tab-content -->
 
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/admin/sungpah.png" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
+                  <div class="tab-content" id="tab-3">
+                    <div class="row">    
+                      <div class="col-md-2">
+                      </div>          
+                      <div class="col-md-8">
+                        <h2>Icebreaker Guideline</h2>
+                        For a stable work environment, Ringle has set a basic policy.<br><br>
+                        1. You have to join a class in a timely manner. ( By :57)<br>
+                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/TIUchTNurOI?rel=0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- /.col -->
+                      <div class="col-md-2">
+                      </div>          
+                    </div><!-- /.row -->
+                  </div><!-- /.tab-content -->
 
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>송지연</h3>
-                          <p>
-                          고객 지원 총괄, 고객 개척 리드/<br>
-                          전 소프트뱅크벤쳐스 코리아<br>
-                          서울대 학사/Michigan 석사 <br>
-                          </p>
-
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/art/photograph02.jpg" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>전민영</h3>
-                          <p>
-                          개발 리드<br>
-                          현 서울대 컴퓨터 공학/시각디자인 전공<br>
-                          </p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/art/photograph02.jpg" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>심선욱</h3>
-                          <p>
-                          수업자료 개발 리드 <br>
-                          현 Stanford MS <br>
-                          Stanford 학부 졸업/용인외고 졸업<br>
-                          </p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/art/photograph02.jpg" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>박준성</h3>
-                          <p>
-                          Data Analysis <br>
-                          서비스 개발 <br>
-                          현 서울대 경영 전공 <br>
-                          </p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/art/photograph02.jpg" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>Jaimie Piotrowicz</h3>
-                          <p>
-                          Tutor 교육/육성 Associate<br>
-                          현 미국 초등 교사/Ringle tutor <br>
-                          전 UPenn 교육학 석사 <br>
-                          </p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/admin/jaimie.png" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-                <li class="item thumb photography">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h3>Danny Pohl</h3>
-                          <p>
-                          Tutor Recruiting Associate<br>
-                          현 Harvard 학사 <br>
-                          </p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="assets/images/admin/danny.png" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
-
-              </ul><!-- /.items -->
-              
+                  <div class="tab-content" id="tab-4">
+                    <div class="row">    
+                      <div class="col-md-2">
+                      </div>          
+                      <div class="col-md-8">
+                        <h2>Wrap-up Guideline</h2>
+                        For a stable work environment, Ringle has set a basic policy.<br><br>
+                        1. You have to join a class in a timely manner. ( By :57)<br>
+                        <div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/fdFDO673gtM?rel=0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- /.col -->
+                      <div class="col-md-2">
+                      </div>          
+                    </div><!-- /.row -->
+                  </div><!-- /.tab-content -->
+              </div><!-- /.tabs -->
             </div><!-- /.col -->
-          </div><!-- /.row -->
-          
+          </div><!-- /.row -->          
         </div><!-- /.container -->
       </section>
-
-
-      <!-- 링글의 폴리시 -->
 
       <section id="policy">
         <div class="container inner">
           <div class="row">
             <div class="col-md-12 col-sm-9">
               <header>
-                <h1>링글 Pricing & Policy</h1>
+                <h1>Ringle Policy</h1>
                   <h3 class="sidelines text-center"></h3>
                   
                    
-                  <strong>Ringle은 ‘고객의 실전적 영어회화 실력 향상’을 최우선 목표로 합니다.</strong><br><br>
-                  Ringle은 ‘다양한 수준 높은 Native speaker와 자주 & 많이 영어로 대화 후 영어교정을 받는 것’이 영어회화 실력 향상을 위한 지름길이라 믿고 있습니다.<br>
-                  이에, Ringle 규정은 ‘다양한 Native speaker와 자주 & 많이 영어를 사용하도록 동기부여 하는 것을 원칙’으로 제작되었습니다.<br><br>
+                  <strong>Ringle only provides the highest quality service to the clients</strong><br><br>
+                  
+                  Ringle strongly highlights <br><br>
 
-                  자세한 가격정책, referral 및 환불 규정은 다음 링크에서 확인하실 수 있습니다.<br><br>
+                  <p style="margin-left:40px">    
+                    <i class="icon-ok"></i>Punctuality<br>
+                    <i class="icon-ok"></i>High speed internet status<br>
+                    <i class="icon-ok"></i>Interactive class<br>
+                    <i class="icon-ok"></i>Professionalism<br>
+                  </p>
+
+                  Any behaviors against Ringle's value will be discouraged. For more information, please refer to 
+                  <br>
+
                   <a href="https://s3-us-west-2.amazonaws.com/ringleplus2015/Ringle_policy.pdf" class="btn btn-large icon-download"> 링글 정책 </a>
 
               </header>
@@ -1203,32 +831,24 @@
             <div class="col-md-8 inner-right inner-bottom-xs">
               <header>
                 <h2>Contact Info</h2>
-                <p>첫 수업이신 경우,고객의 영어 고민을 듣고 첫 수업에 대한 궁금증을 풀어드리고자 수업에 앞서 상담을 드립니다. 상담 요청을 해주세요</p>
+                <p>If you want to know about Ringle, please contact us</p>
 
 
                 <a href="#myModal" class="btn apply" data-option="0" data-toggle="modal" data-target="#myModal">체험 수업 신청</a>
-
-
-
-
               </header>
             </div><!-- /.col -->
             
             <div class="col-md-4">
               <h3 style="margin-top: 8px;">RINGLE</h3>
               <ul class="contacts">
-                <li><i class="icon-location contact"></i>서울시 강남구 역삼동 마루 180 </li>
-                <li><i class="icon-mobile contact"></i> +82 (10) 6779 0334</li>
-                <li><a href="mailto:info@reen.com"><i class="icon-mail-1 contact"></i> contact@ringleplus.com</a></li>
+                <li><i class="icon-location contact"></i>Seoul, Korea, Yeoksam gu Maru 180</li>
+                <li><a href="mailto:info@reen.com"><i class="icon-mail-1 contact"></i> sungpah@stanford.edu</a></li>
               </ul><!-- /.contacts -->
             </div><!-- /.col -->
             
           </div><!-- ./row -->
         </div><!-- /.container -->
       </section>
-
-
-
 
 <%= render "/payments/classapplymodal"%> <!-- 나중에 이부분 체인지를 합시다~ -->
 
