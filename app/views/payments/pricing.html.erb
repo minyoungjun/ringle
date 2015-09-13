@@ -1,3 +1,72 @@
+<!-- purchase this plan 버튼을 누르면 먼저, 윈도우 10유저는 모바일로 결제해주세요. -->
+<!-- 크롬 유저는 윈도우 익스플로러를 통해서 결재해 주세요 -->
+
+<header>
+  <div class="navbar">    
+    <%if @main%>
+    <div class="navbar-header">
+      <div class="container">
+        
+        <ul class="info pull-left">
+          <li><a href="#"><i class="icon-mail-1 contact"></i>contact@ringleplus.com</a></li>
+          <li><i class="icon-mobile contact"></i>010-6779-0334</li>
+        </ul><!-- /.info -->
+        
+        <ul class="social pull-right">
+          <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-s-gplus"></i></a></li>
+        </ul><!-- /.social -->
+        
+        <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+        <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
+        
+      </div><!-- /.container -->
+    </div><!-- /.navbar-header -->
+    <div class="yamm">
+      <div class="navbar-collapse collapse">
+        <div class="container">
+          
+          <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+ 
+          <ul class="nav navbar-nav">
+            
+            <li class="page-scroll">
+              <a href="#ringle-intro">About Ringle</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#ringle-program">프로그램</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#ringle-tutors">튜터</a>
+            </li>
+
+            <li class="page-scroll">
+              <a href="#ringle-books">교재</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#ringle-clients">고객 레퍼런스</a>
+            </li>
+            <li class="page-scroll">
+              <a href="/payments/pricing">Pricing</a>
+              </li>
+
+            <li class="page-scroll">
+              <a href="#ringle-policy">링글 policy</a>
+            </li>
+
+          </ul><!-- /.nav -->
+          
+          
+        </div><!-- /.container -->
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.yamm -->
+    <%end%>
+  </div><!-- /.navbar -->
+</header>
+<main>      
+
+
+
 <section id="pricing-tables">
   <div class="container inner">
     
@@ -70,33 +139,18 @@
               <div class="col-md-2">
 
                 <select name="number" style="margin-top:15px;">
-                  
-
                 <% for i in 4..20 %>
                   <option value = "<%=i%>" >
                   <%= i%>
                 </option>
                 <% end %>
-
-
                 </select>
               </div><!-- /.col -->
-
               <div class="col-md-10">
-
-
-
               <button type="submit" class="btn"> CUSTOMIZED PLAN </button>
-
-
           </form>
-
 </div>
 </div>              
-
-
-
-             
 
           </header>
 
@@ -113,11 +167,16 @@
 </section>
 
 <!-- Modal -->
-<%= render "/payments/modal"%>
+<%= render "/payments/modal"%>  <!-- 여기에 selectBox가 있음 -->
 
-<!-- Modal for customized purchase -->
 
-<%= render "/payments/modalcustom"%>
+<script>
+//  $(".purchase").click(function(){
+  //  var option_value = $(this).data("option");
+    //$("#selectBox").val(option_value);
+  
+ // });
+</script>
 
 
 <script>
@@ -127,5 +186,8 @@
   
   });
 </script>
+
+
+
 
 
