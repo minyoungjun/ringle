@@ -1,5 +1,3 @@
-<!-- purchase this plan 버튼을 누르면 먼저, 윈도우 10유저는 모바일로 결제해주세요. -->
-<!-- 크롬 유저는 윈도우 익스플로러를 통해서 결재해 주세요 -->
 
 <header>
   <div class="navbar">    
@@ -17,7 +15,10 @@
           <li><a href="#"><i class="icon-s-gplus"></i></a></li>
         </ul><!-- /.social -->
         
-        <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+
+
+
+              <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" class="logo" alt=""></a>
         <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
         
       </div><!-- /.container -->
@@ -26,10 +27,9 @@
       <div class="navbar-collapse collapse">
         <div class="container">
           
-          <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" class="logo" alt=""></a>
+              <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" class="logo" alt=""></a>
  
           <ul class="nav navbar-nav">
-            
             <li class="page-scroll">
               <a href="#ringle-intro">About Ringle</a>
             </li>
@@ -39,7 +39,6 @@
             <li class="page-scroll">
               <a href="#ringle-tutors">튜터</a>
             </li>
-
             <li class="page-scroll">
               <a href="#ringle-books">교재</a>
             </li>
@@ -49,14 +48,10 @@
             <li class="page-scroll">
               <a href="/payments/pricing">Pricing</a>
               </li>
-
             <li class="page-scroll">
               <a href="#ringle-policy">링글 policy</a>
             </li>
-
           </ul><!-- /.nav -->
-          
-          
         </div><!-- /.container -->
       </div><!-- /.navbar-collapse -->
     </div><!-- /.yamm -->
@@ -65,15 +60,12 @@
 </header>
 <main>      
 
-
-
 <section id="pricing-tables">
-  <div class="container inner">
-    
+  <div class="container inner">    
     <div class="row">
       <div class="col-md-12 col-sm-9">
         <header>
-          <a href="/"><h2><img src="/assets/images/logo.png"/></h2></a>
+              <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" class="logo" alt=""></a>
           <h2>결제전 유의 사항</h2>
           <p>Ringle Service를 처음 이용하시는 고객님께서는 결제하시기 전에 <strong>Ringle Team(contact@ringleplus.com)</strong>으로 연락을 주시면 Service Guide를 먼저 해 드립니다.<br>기존 고객님께서는 아래에서 해당하는 버튼을 눌러 결제를 해주세요.</p>
         </header>
@@ -81,91 +73,97 @@
     </div><!-- /.row -->
     
     <div class="row pricing">
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
+      <div class="col-md-3 col-sm-6 inner-top-sm">
         <div class="plan">
-          
-          <header>
-            <h2>Four times plan</h2>
-            
-            <div class="price">
-              <span class="amount" style="font-size:30px;">200,000원</span>
-            </div><!-- /.price -->
-            
-            
-            <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase this plan</a>
-
-
+          <header style="padding:10px; height:230px;">
+            <div class="row">
+              <h2 style="padding:10px;">Four times</h2>
+              <div class="price">
+                <span class="amount" style="font-size:30px;">200,000원</span>
+              </div><!-- /.price -->
+            </div>
+            <div class="row">
+              <a href="#myModal" class="btn purchase" data-option="0" data-toggle="modal" data-target="#myModal">purchase plan</a>
+            </div>
           </header>
-          
-          <ul class="features">
-            <li><i class="icon-book"></i>Two cases</li>
-          </ul><!-- /.features -->
-          
         </div><!-- /.plan -->
       </div><!-- /.col -->
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
+      <div class="col-md-3 col-sm-6 inner-top-sm">
         <div class="plan">
-          <header>
-            <h2>Eight times plan</h2>
-            <div class="price">
-              <span class="amount" style="font-size:30px;">400,000원</span>
-              <span class="period">/ 8회</span>
-            </div><!-- /.price -->
-            <a href="#myModal" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal">purchase this plan</a>
-            
+          <header style="padding:10px; height:230px;">
+            <div class="row">
+              <h2 style="padding:10px;">Eight times</h2>
+              <div class="price">
+                <span class="amount" style="font-size:30px;">400,000원</span>
+              </div><!-- /.price -->
+            </div>
+            <div class="row">
+              <a href="#myModal" class="btn purchase" data-option="1" data-toggle="modal" data-target="#myModal">purchase plan</a>
+            </div>
           </header>
-          <ul class="features">
-            <li><i class="icon-book"></i>Four cases</li>
-          </ul><!-- /.features -->
-
         </div><!-- /.plan -->
       </div><!-- /.col -->
-      
-      <div class="col-md-4 col-sm-6 inner-top-sm">
+      <div class="col-md-3 col-sm-6 inner-top-sm">
         <div class="plan">
-          <header>
-            <h2>Customized</h2>
-            
-            <div class="price">
-              <span class="amount" style="font-size:30px;">50,000원</span>
-              <span class="period">/ 1회</span>
-            </div><!-- /.price -->
-
-              <div class="row">
-
-                <form action="/payments/customized" method="GET">
-              <div class="col-md-2">
-
-                <select name="number" style="margin-top:15px;">
-                <% for i in 4..20 %>
-                  <option value = "<%=i%>" >
-                  <%= i%>
-                </option>
-                <% end %>
-                </select>
-              </div><!-- /.col -->
-              <div class="col-md-10">
-              <button type="submit" class="btn"> CUSTOMIZED PLAN </button>
-          </form>
-</div>
-</div>              
-
+          <header style="padding:10px; height:230px;">
+            <div class="row">
+              <h2 style="padding:10px;">Interview</h2>
+              <div class="price">
+                <span class="amount" style="font-size:30px;">70,000원</span>
+                <span class="period">/ 1회</span>
+              </div><!-- /.price -->
+            </div>  
+            <div class="row">
+              <form action="/payments/interview" method="GET">
+                <div class="col-md-12">
+                  <div class="col-md-2 col-sm-4">
+                    <select name="number" style="margin-top:15px;">
+                      <% for i in 1..5 %>
+                        <option value = "<%=i%>"><%= i%></option>
+                      <% end %>
+                    </select>
+                  </div><!-- /.col md 2-->
+                  <div class="col-md-10 col-sm-8">
+                    <button type="submit" class="btn"> Purchse Plan </button>
+                  </div>
+                </div><!-- col-12-->
+              </form>
+            </div>
           </header>
-
-          <ul class="features">
-            <li><i class="icon-book"></i>One case per two classes</li>
-          </ul><!-- /.features -->
-          
-        </div><!-- /.plan -->
-      </div><!-- /.col -->
-      
+        </div>    
+      </div><!-- /.col --> 
+      <div class="col-md-3 col-sm-6 inner-top-sm">
+        <div class="plan">
+          <header style="padding:10px; height:230px;">
+            <div class="row">
+              <h2 style="padding:10px;">Custom</h2>
+              <div class="price">
+                <span class="amount" style="font-size:30px;">50,000원</span>
+                <span class="period">/ 1회</span>
+              </div><!-- /.price -->
+            </div>  
+            <div class="row">
+              <form action="/payments/customized" method="GET">
+                <div class="col-md-12">
+                  <div class="col-md-2 col-sm-4">
+                    <select name="number" style="margin-top:15px;">
+                      <% for i in 4..20 %>
+                        <option value = "<%=i%>"><%= i%></option>
+                      <% end %>
+                    </select>
+                  </div><!-- /.col md 2-->
+                  <div class="col-md-10 col-sm-8">
+                    <button type="submit" class="btn"> Purchse Plan </button>
+                  </div>
+                </div><!-- col-12-->
+              </form>
+            </div>
+          </header>
+        </div>    
+      </div><!-- /.col -->  
     </div><!-- /.row -->
-    
   </div><!-- /.container -->
 </section>
-
 <!-- Modal -->
 <%= render "/payments/modal"%>  <!-- 여기에 selectBox가 있음 -->
 

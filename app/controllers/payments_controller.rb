@@ -19,6 +19,11 @@ require 'open-uri'
 
   end
 
+  def interview
+    @amount = params[:number].to_i
+    @user = current_user   
+  end
+
   def apply_trial_class
 
 

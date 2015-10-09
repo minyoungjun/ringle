@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'promotion/:id' => "payments#promotion"
 
   get 'payments/tagboard'
+  get 'payments/interview'
 
   get 'timetables/login'
   get 'timetables/set_table'
