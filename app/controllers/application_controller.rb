@@ -14,5 +14,6 @@ class ApplicationController < ActionController::Base
     if geo.country_code.to_i != 119 && geo.country_code.to_i != 0
       redirect_to "http://tutor.ringleplus.com"
     end
+    
   end
 end

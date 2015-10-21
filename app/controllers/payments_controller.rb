@@ -75,14 +75,18 @@ require 'open-uri'
     pur.plan = params[:plan].to_i
     pur.method = params[:method].to_i
 
+   
+
     if params[:plan].to_i == 0
       pur.amount = 200000
     elsif params[:plan].to_i == 1
       pur.amount = 400000
     elsif params[:plan].to_i == 2
       pur.amount = (params[:customize].to_i)*50000
+    elsif params[:plan].to_i == 3
+      pur.amount = (params[:customize].to_i)*70000
     else
-pur.amount = (params[:customize].to_i)*25000
+      pur.amount = (params[:customize].to_i)*50000
     end
 
     pur.save
